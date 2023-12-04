@@ -1,0 +1,133 @@
+﻿#newPlanButton {
+    height: 40px;
+    width: 165px;
+    color:white;
+    background-color: #28285A;
+    margin-right: 40px;
+    float: right;
+}
+    #newPlanButton::before {
+        color: white;
+    }
+
+#modalContent {
+    height: 700px;
+    margin-top:30px
+}
+
+
+#box {
+    height: 700px;
+    width: 300px;
+    background: #d33;
+    position: relative;
+    margin-top: 100px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.circle {
+    position: absolute;
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    border: 3px solid white;
+    left: 50%;
+    margin-left: -55px;
+    top: -32px;
+    background: #d1d1d1;
+}
+
+#plusIcon {
+    font-size: 40px;
+    margin-left: 27px;
+    margin-top: 27px;
+    color: #6F6F6F;
+}
+span.circleActive {
+    background: #F78D02;
+    border-radius: 50%;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    color: white;
+    font-size: 22px;
+    display: inline-block;
+    font-weight: bold;
+    line-height: 55px;
+    margin-right: 5px;
+    text-align: center;
+    width: 60px;
+    border: 3px solid #4C6CB3;
+    float: right;
+    position: relative;
+}
+span.circleInactive {
+    background: #4C6CB3;
+    border-radius: 50%;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    color: white;
+    font-size: 22px;
+    display: inline-block;
+    font-weight: bold;
+    line-height: 55px;
+    margin-right: 5px;
+    text-align: center;
+    width: 60px;
+    border: 3px solid #4C6CB3;
+    float: right;
+    position: relative;
+}
+
+#lbTitle {
+    font-size: 25px;
+    margin-left: 20px;
+    margin-bottom: 20px;
+    color: #28285A;
+}
+
+#hatchTitleContainer {
+    display: block;
+    float: left;
+    margin-left: 30px;
+}
+
+#quantityTitleContainer {
+    display: block;
+    float: left;
+    margin-left: 40px;
+    margin-right: 40px;
+}
+
+#materialTitleContainer {
+    display: block;
+    float: left;
+}
+
+#titlesContainer {
+    display: block;
+    float: left;
+    margin-bottom: 05px;
+}
+
+#hatchTitle {
+    display: inline-block;
+    font-size: 12px;
+    margin-left: 05px;
+    color: #28285A;
+}
+
+#quantityTitle {
+    display: inline-block;
+    overflow: visible;
+    width: 120px;
+    font-size: 12px;
+    margin-left: 03px;
+    color: #28285A;
+}
+
+#materialTitle {
+    display: inline-block;
+    font-size: 12px;
+    color: #28285A;
+}

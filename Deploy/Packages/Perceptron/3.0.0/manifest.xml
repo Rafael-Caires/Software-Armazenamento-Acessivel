@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PackageManifest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Name>Perceptron</Name>
+  <PlatformVersion>3.5</PlatformVersion>
+  <Version>3.0.0</Version>
+  <Dependencies>
+    <Package>
+      <Name>Accord</Name>
+      <Version>4.0</Version>
+    </Package>
+    <Package>
+      <Name>Accord.Math</Name>
+      <Version>4.0</Version>
+    </Package>
+    <Package>
+      <Name>Data</Name>
+      <Version>4.0</Version>
+    </Package>
+    <Package>
+      <Name>Objects</Name>
+      <Version>5.0</Version>
+    </Package>
+    <Package>
+      <Name>System.Reactive</Name>
+      <Version>5.0</Version>
+    </Package>
+  </Dependencies>
+</PackageManifest>

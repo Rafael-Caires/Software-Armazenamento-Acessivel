@@ -1,0 +1,7 @@
+Lynx Core:
+- DotNet Framework 4.6;
+
+Lynx Studio 2D:
+- DotNet Framework 4.6 (https://www.microsoft.com/en-us/download/details.aspx?id=53344)
+- Windows6.0-KB971512-x64.msu (https://www.microsoft.com/en-us/download/details.aspx?id=12870)
+- Windows6.0-KB2117917-x64.msu (https://www.microsoft.com/en-us/download/details.aspx?id=15010)

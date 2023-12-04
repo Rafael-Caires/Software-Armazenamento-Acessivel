@@ -1,0 +1,50 @@
+﻿/* basic positioning */
+.legend {
+    list-style: none;
+}
+
+    .legend li {
+        float: left;
+        margin-right: 8px;
+        margin-left: 8px;
+        margin-top: 7px;
+    }
+
+    .legend span {
+        border: 1px solid #ccc;
+        float: left;
+        width: 12px;
+        height: 12px;
+        margin: 8px;
+    }
+    /* your colors */
+    .legend .Criado {
+        background-color: #FFD700;
+    }
+
+    .legend .Programado {
+        background-color: #0000FF;
+    }
+
+    .legend .Em_execucao {
+        background-color: #008000;
+    }
+
+    .legend .Pausado {
+        background-color: #FF8C00;
+    }
+
+    .legend .Finalizado {
+        background-color: #FF0000;
+    }
+
+    .legend .Excluido {
+        background-color: #808080;
+    }
+
+#rectangle {
+    width: 100%;
+    height: 100%;
+    background: none;
+}
+

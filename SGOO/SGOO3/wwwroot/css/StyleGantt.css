@@ -1,0 +1,224 @@
+﻿
+.day_scale
+{
+    background-color: #C3C7D4;
+}
+
+.week_scale {
+    background-color: #E5DFE8;
+}
+
+.month_scale {
+    background-color: #DFE8DF;
+}
+
+.weekend {
+    background: #f4f7f4 !important;
+}
+
+.create {
+    border-color: #FFD700 !important;
+    color: #FFD700 !important;
+    background-color: #FFD700;
+    background: #eead2d;
+}
+
+    .create .gantt_task_progress {
+        background-color: #FFD700 !important;
+    }
+
+.squeezed .gantt_task_line {
+    position: absolute;
+    height: 8px;
+    display: block;
+}
+
+.overlap .gantt_task_line, .overlap .gantt_task_line.gantt_selected {
+    position: absolute;
+    height: 8px;
+    margin-top: 14px;
+    
+}
+
+.program {
+    border-color: #5151f5 !important;
+    color: #5151f5 !important;
+    background-color: #5151f5;
+    background: #6495ed;
+}
+
+    .program .gantt_task_progress {
+        background-color: #5151f5 !important;
+    }
+
+.execution {
+    border-color: #3d8a3d !important;
+    color: #3d8a3d !important;
+    background-color: #3d8a3d;
+    background: #8fbc8f;
+}
+
+    .execution .gantt_task_progress {
+        background-color: #3d8a3d !important;
+    }
+
+.paused {
+    border-color: #FF8C00 !important;
+    color: #FF8C00 !important;
+    background-color: #FF8C00;
+    background: #cd853f;
+}
+
+    .paused .gantt_task_progress {
+        background-color: #FF8C00 !important;
+    }
+
+.finaly {
+    border-color: #FF0000 !important;
+    color: #FF0000 !important;
+    background-color: #FF0000;
+    background: #ff6347;
+}
+
+    .finaly .gantt_task_progress {
+        background-color: #FF0000 !important;
+    }
+
+.deleted {
+    border-color: #666666 !important;
+    color: #666666 !important;
+    background-color: #666666 !important;
+    background: #a0a0a0;
+}
+
+    .deleted .gantt_task_progress {
+        background-color: #666666 !important;
+    }
+
+
+.filters_wrapper span {
+    font-weight: bold;
+    padding-right: 5px;
+    color: rgba(0,0,0,0.7);
+}
+
+.filters_wrapper label {
+    padding-right: 3px;
+}
+
+.marker {
+    position: absolute;
+    color: black;
+    border-left: 2px solid black;
+    padding-left: 2px;
+    margin-left: -2px; /*compensate task borders*/
+}
+
+    .marker.top {
+        top: 0px;
+        height: 10px;
+        font-size: 10px;
+        line-height: 11px;
+    }
+
+    .marker.bottom {
+        bottom: 0px;
+        height: 8px;
+        font-size: 8px;
+        line-height: 9px;
+    }
+
+
+.gantt_side_content {
+    margin-bottom: 7px;
+}
+
+.gantt_task_link .gantt_link_arrow {
+    margin-top: -12px
+}
+
+.gantt_side_content.gantt_right {
+    bottom: 0;
+}
+
+.gantt_custom_button {
+    background-color: rgb(206, 206, 206);
+    position: absolute;
+    right: -10px;
+    top: 5px;
+    width: 20px;
+    height: 26px;
+    border-radius: 0;
+}
+
+.custom-control-input-create {
+    background-color: #FFD700;
+    width: 100%;
+    text-align: left;
+}
+
+.custom-control-input-create-program {
+    background-color: #5151f5;
+    width: 100%;
+    text-align: left;
+}
+
+.custom-control-input-create-delete {
+    background-color: #666666;
+    width: 100%;
+    text-align: left;
+}
+
+.custom-control-input-create-finally {
+    background-color: #ff0000;
+    width: 100%;
+    text-align: left;
+}
+
+.custom-control-input-create-paused {
+    background-color: #FF8C00;
+    width: 100%;
+    text-align: left;
+}
+
+.custom-control-input-create-execution {
+    background-color: #3d8a3d;
+    width: 100%;
+    text-align: left;
+}
+
+.child_preview {
+    box-sizing: border-box;
+    margin-top: -9px !important;
+    position: absolute;
+    z-index: 1;
+    color: white;
+    text-align: center;
+    font-size: 12px;
+}
+
+.gantt_task_line.task-collapsed {
+    height: 4px;
+    opacity: 0.25;
+}
+
+.gantt_task_line.gantt_project.task-collapsed .gantt_task_content {
+    display: none;
+}
+
+.gantt_row.task-parent {
+    font-weight: bold;
+}
+
+.gantt_task_line.gantt_split_parent {
+    display: none;
+}
+.gantt_task_line.gantt_split_child {
+    display: inline-block;
+}
+.gantt_task_line, .gantt_line_wrapper {
+    border-radius: 5px;
+   
+}
+
+

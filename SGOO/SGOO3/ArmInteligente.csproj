@@ -1,0 +1,175 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <UserSecretsId>aspnet-SGOO3-11363086-435A-49E7-9AED-622732442CA1</UserSecretsId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Controllers\QPS\**" />
+    <Compile Remove="Data\Files\**" />
+    <Compile Remove="Views\QualityClusteredMovements\**" />
+    <Content Remove="Controllers\QPS\**" />
+    <Content Remove="Data\Files\**" />
+    <Content Remove="Views\QualityClusteredMovements\**" />
+    <EmbeddedResource Remove="Controllers\QPS\**" />
+    <EmbeddedResource Remove="Data\Files\**" />
+    <EmbeddedResource Remove="Views\QualityClusteredMovements\**" />
+    <None Remove="Controllers\QPS\**" />
+    <None Remove="Data\Files\**" />
+    <None Remove="Views\QualityClusteredMovements\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Remove="Migrations\20210830152131_angleOfRepose.cs" />
+    <Compile Remove="Migrations\20210830152131_angleOfRepose.Designer.cs" />
+    <Compile Remove="Migrations\20210909141510_Listener.cs" />
+    <Compile Remove="Migrations\20210909141510_Listener.Designer.cs" />
+    <Compile Remove="Migrations\20210909142213_Listener.cs" />
+    <Compile Remove="Migrations\20210909142213_Listener.Designer.cs" />
+    <Compile Remove="Migrations\20210914123041_productAngleOfRepose.cs" />
+    <Compile Remove="Migrations\20210914123041_productAngleOfRepose.Designer.cs" />
+    <Compile Remove="Migrations\20210914123208_Listener.cs" />
+    <Compile Remove="Migrations\20210914123208_Listener.Designer.cs" />
+    <Compile Remove="Migrations\20210915171543_NewCampo.cs" />
+    <Compile Remove="Migrations\20210915171543_NewCampo.Designer.cs" />
+    <Compile Remove="Migrations\20210922132906_DeleteHistory.cs" />
+    <Compile Remove="Migrations\20210922132906_DeleteHistory.Designer.cs" />
+    <Compile Remove="Migrations\20210922134709_HistoryExclused.cs" />
+    <Compile Remove="Migrations\20210922134709_HistoryExclused.Designer.cs" />
+    <Compile Remove="Migrations\20210923172709_StackingMethodStackHeight.cs" />
+    <Compile Remove="Migrations\20210923172709_StackingMethodStackHeight.Designer.cs" />
+    <Compile Remove="Migrations\20210923185814_DeletedHistory.cs" />
+    <Compile Remove="Migrations\20210923185814_DeletedHistory.Designer.cs" />
+    <Compile Remove="Migrations\20210924130959_Campo_justify.cs" />
+    <Compile Remove="Migrations\20210924130959_Campo_justify.Designer.cs" />
+    <Compile Remove="Migrations\20210927161311_newCampo.cs" />
+    <Compile Remove="Migrations\20210927161311_newCampo.Designer.cs" />
+    <Compile Remove="Migrations\20210927163929_HistoryTable.cs" />
+    <Compile Remove="Migrations\20210927163929_HistoryTable.Designer.cs" />
+    <Compile Remove="Migrations\20210927170403_HistoryTable.cs" />
+    <Compile Remove="Migrations\20210927170403_HistoryTable.Designer.cs" />
+    <Compile Remove="Migrations\20210927170913_HistoryTable.cs" />
+    <Compile Remove="Migrations\20210927170913_HistoryTable.Designer.cs" />
+    <Compile Remove="Migrations\20210927171648_HistoryTable.cs" />
+    <Compile Remove="Migrations\20210927171648_HistoryTable.Designer.cs" />
+    <Compile Remove="Migrations\20210927194053_HistoryTable.cs" />
+    <Compile Remove="Migrations\20210927194053_HistoryTable.Designer.cs" />
+    <Compile Remove="Migrations\20211029143650_GPVMQualityRequest.cs" />
+    <Compile Remove="Migrations\20211029143650_GPVMQualityRequest.Designer.cs" />
+    <Compile Remove="Migrations\20211103144531_ControlPointCKS.cs" />
+    <Compile Remove="Migrations\20211103144531_ControlPointCKS.Designer.cs" />
+    <Compile Remove="Migrations\20211103175406_AmqQueueConfig.cs" />
+    <Compile Remove="Migrations\20211103175406_AmqQueueConfig.Designer.cs" />
+    <Compile Remove="Migrations\20211103182312_AmqQueueConfig.cs" />
+    <Compile Remove="Migrations\20211103182312_AmqQueueConfig.Designer.cs" />
+    <Compile Remove="Migrations\20211104142859_AmqQueueConfig.cs" />
+    <Compile Remove="Migrations\20211104142859_AmqQueueConfig.Designer.cs" />
+    <Compile Remove="Migrations\20211105172248_BlendComposition.cs" />
+    <Compile Remove="Migrations\20211105172248_BlendComposition.Designer.cs" />
+    <Compile Remove="Migrations\20211105172715_BlendComposition.cs" />
+    <Compile Remove="Migrations\20211105172715_BlendComposition.Designer.cs" />
+    <Compile Remove="Migrations\20220113191309_JobOnRpu.cs" />
+    <Compile Remove="Migrations\20220113191309_JobOnRpu.Designer.cs" />
+    <Compile Remove="Migrations\20220114122645_JobOnRpu.cs" />
+    <Compile Remove="Migrations\20220114122645_JobOnRpu.Designer.cs" />
+    <Compile Remove="Migrations\20220527173500_qps.cs" />
+    <Compile Remove="Migrations\20220527173500_qps.Designer.cs" />
+    <Compile Remove="Migrations\20220527182656_qps.cs" />
+    <Compile Remove="Migrations\20220527182656_qps.Designer.cs" />
+    <Compile Remove="Migrations\20220527184302_qps2.cs" />
+    <Compile Remove="Migrations\20220527184302_qps2.Designer.cs" />
+    <Compile Remove="Migrations\20220705141542_MaterialSequence.cs" />
+    <Compile Remove="Migrations\20220705141542_MaterialSequence.Designer.cs" />
+    <Compile Remove="Migrations\20220716160135_AddjOBIdSequenceExecution.cs" />
+    <Compile Remove="Migrations\20220716160135_AddjOBIdSequenceExecution.Designer.cs" />
+    <Compile Remove="Migrations\20220716175208_ChangeStackToArea.cs" />
+    <Compile Remove="Migrations\20220716175208_ChangeStackToArea.Designer.cs" />
+    <Compile Remove="Migrations\20220804170428_LQSStatus.cs" />
+    <Compile Remove="Migrations\20220804170428_LQSStatus.Designer.cs" />
+    <Compile Remove="Migrations\20220804191612_QPS.cs" />
+    <Compile Remove="Migrations\20220804191612_QPS.Designer.cs" />
+    <Compile Remove="Models\Relationship\SiloMaterial.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Remove="wwwroot\Build\Lynx 3D Web Viewer.data" />
+    <Content Remove="wwwroot\Build\Lynx 3D Web Viewer.framework.js" />
+    <Content Remove="wwwroot\Build\Lynx 3D Web Viewer.loader.js" />
+    <Content Remove="wwwroot\Build\Lynx 3D Web Viewer.wasm" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="32feet.NET" Version="3.5.0" />
+    <PackageReference Include="Apache.NMS.ActiveMQ.NetCore" Version="1.7.2" />
+    <PackageReference Include="Bluetooth" Version="1.0.0.2" />
+    <PackageReference Include="ExcelDataReader.DataSet" Version="3.6.0" />
+    <PackageReference Include="InTheHand.Bluetooth.Permissions" Version="7.0.1" />
+    <PackageReference Include="InTheHand.BluetoothLE" Version="4.0.34" />
+    <PackageReference Include="Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore" Version="3.1.8" />
+    <PackageReference Include="Microsoft.AspNetCore.Hosting" Version="2.2.7" />
+    <PackageReference Include="Microsoft.AspNetCore.Hosting.WindowsServices" Version="3.1.18" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="3.1.10" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.UI" Version="3.1.10" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="3.1.15" />
+    <PackageReference Include="Microsoft.AspNetCore.SignalR" Version="1.1.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="3.1.13" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="3.1.30" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="3.1.30">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.Extensions.Hosting" Version="5.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Hosting.WindowsServices" Version="5.0.1" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="3.1.5" />
+    <PackageReference Include="Nancy" Version="2.0.0" />
+    <PackageReference Include="NEST" Version="7.17.5" />
+    <PackageReference Include="Network" Version="6.2.5.23" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.3" />
+    <PackageReference Include="Swashbuckle.Core" Version="5.6.0" />
+    <PackageReference Include="System.Configuration.ConfigurationManager" Version="6.0.0" />
+    <PackageReference Include="System.DirectoryServices.AccountManagement" Version="5.0.0" />
+    <PackageReference Include="System.Linq.Dynamic.Core" Version="1.2.13" />
+    <PackageReference Include="System.Net.Primitives" Version="4.3.1" />
+    <PackageReference Include="System.Text.Encoding.CodePages" Version="5.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Areas\LQS\" />
+    <Folder Include="Migrations\" />
+    <Folder Include="wwwroot\img\icons-svg\" />
+    <Folder Include="wwwroot\img\logos\" />
+    <Folder Include="wwwroot\img\lynxsgoo\" />
+    <Folder Include="wwwroot\img\qps\Status\" />
+    <Folder Include="wwwroot\img\ShipImages\" />
+    <Folder Include="wwwroot\log\" />
+    <Folder Include="wwwroot\fileloader\" />
+    <Folder Include="wwwroot\resources\" />
+	<Folder Include="wwwroot\Build\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="Views\Shared\_Layout.cshtml" />
+    <None Include="Views\Shared\_LayoutDashboard.cshtml" />
+    <None Include="Views\Shared\_LayoutDashboardHome.cshtml" />
+    <None Include="Views\Shared\_LayoutLogin.cshtml" />
+    <None Include="Views\Shared\_LayoutReports.cshtml" />
+    <None Include="Views\Shared\_LoginPartial.cshtml" />
+    <None Include="Views\Shared\_SidebarDashboard.cshtml" />
+    <None Include="Views\Shared\_TopbarDashboard.cshtml" />
+    <None Include="Views\Shared\_ValidationScriptsPartial.cshtml" />
+    <None Include="wwwroot\Build\Lynx 3D Web Viewer.data" />
+    <None Include="wwwroot\Build\Lynx 3D Web Viewer.framework.js" />
+    <None Include="wwwroot\Build\Lynx 3D Web Viewer.loader.js" />
+    <None Include="wwwroot\Build\Lynx 3D Web Viewer.wasm" />
+    <None Include="wwwroot\Dashboard\js\html2pdf\html2pdf.bundle.js" />
+    <None Include="wwwroot\Dashboard\js\html2pdf\html2pdf.bundle.min.js" />
+    <None Include="wwwroot\Dashboard\js\html2pdf\html2pdf.js" />
+    <None Include="wwwroot\Dashboard\js\html2pdf\html2pdf.min.js" />
+    <None Include="wwwroot\Dashboard\js\html2pdf\include\html2pdf.es.js" />
+    <None Include="wwwroot\Dashboard\js\html2pdf\require\html2pdf.cjs.js" />
+  </ItemGroup>
+
+  <ProjectExtensions><VisualStudio><UserProperties appsettings_1json__JsonSchema="" /></VisualStudio></ProjectExtensions>
+
+</Project>

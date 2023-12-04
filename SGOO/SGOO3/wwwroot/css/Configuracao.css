@@ -1,0 +1,307 @@
+﻿
+.Home-container {
+    height: auto;
+    width: 100%;
+    overflow: auto;
+}
+
+.back-button {
+    background-color: #0B9F9F;
+    border: 1px solid black;
+    border-radius: 10px;
+    color: white;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin-top: 2%;
+    margin-left: 5%;
+    width: 30%;
+}
+
+    .back-button:hover {
+        background-color: #0A8E8E;
+    }
+
+.read-list-button {
+    background-color: #0B9F9F;
+    border: 1px solid black;
+    border-radius: 10px;
+    color: white;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin-top: 2%;
+    margin-left: 5%;
+    width: 30%;
+    display: flex;
+    justify-content: left;
+    width: auto;
+    margin-left: 10%;
+}
+
+.read-list-button:hover {
+    background-color: #0A8E8E;
+}
+
+.add-product-button {
+    background-color: #0B9F9F;
+    border: 1px solid black;
+    border-radius: 10px;
+    color: white;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin-top: 2%;
+    margin-left: 5%;
+    width: 30%;
+    display: flex;
+    justify-content: left;
+    width: auto;
+    margin-left: 10%;
+}
+
+    .add-product-button:hover {
+        background-color: #0A8E8E;
+    }
+
+.settings-button {
+    background-color: #0B9F9F;
+    border: 1px solid black;
+    border-radius: 10px;
+    color: white;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin-top: 2%;
+    width: 30%;
+    float: right;
+    margin-right: 5%;
+}
+
+.settings-button:hover {
+    background-color: #0A8E8E;
+}
+
+.botao-imagem {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    vertical-align: middle;
+    filter: invert(100%);
+}
+
+.botao-imagem-bluetooth {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+.botao-imagem-geladeira {
+    width: 130px;
+    height: 220px;
+    display: flex;
+    margin-left: -20%;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.header-h1 {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin-left: 15%;
+    justify-content: center;
+    font-weight: bold;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.header-img {
+    float: right;
+    margin-right: 10%; /* Ajuste conforme necessário */
+}
+
+.item-list {
+    text-align: left;
+    margin: 10px;
+    width: 80%;
+    justify-content: center;
+    display: inline-block;
+    margin-left: 10%;
+    margin-top: -3%;
+}
+
+.item {
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 5px;
+    text-align: center;
+    margin-top: 2%;
+}
+
+.container-span {
+    font-family: 'Monosserat', sans-serif;
+    font-size: 15px;
+}
+
+.bluetooth-info {
+    display: flex;
+    align-items: center;
+    margin-left: 11%;
+    margin-top: 3%;
+    border: none;
+    background: #E8E8E8;
+}
+
+
+.bluetooth-span {
+    display: flex;
+    flex-direction: column;
+}
+
+.container-span-bluetooth {
+    word-wrap: break-word;
+}
+
+
+h2 {
+    color: black;
+}
+
+.botao-imagem {
+    width: 30px;
+    height: 30px;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+input[type="checkbox"] {
+    margin-right: 5px;
+}
+
+label {
+    color: black;
+    display:flex;
+}
+
+.title-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: 5%;
+    margin-top: 5%;
+    margin-right: 5%;
+}
+
+.image-container {
+    margin-left: 10px; /* Ajuste conforme necessário */
+}
+
+.botao-imagem-config {
+    width: 50px;
+    height: 50px;
+}
+
+.config-span {
+    color: black;
+    font-weight: bold;
+    font-size: 3em;
+}
+
+.cadastro-span {
+    color: black;
+    font-weight: bold;
+    font-size: 2em;
+}
+
+.list-config {
+    margin-top: 5%;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 300px; /* Ajuste conforme necessário para a largura desejada */
+    text-align: left;
+}
+
+.list-config li {
+    position: relative;
+    padding-left: 30px; /* Ajuste conforme necessário para acomodar o espaço para a imagem */
+    line-height: 1.5; /* Garante que a altura da linha seja apropriada */
+    list-style: none; /* Remove o estilo padrão da lista */
+}
+
+.list-config input[type="checkbox"] {
+    position: absolute;
+    left: 0;
+    top: 50%; /* Centraliza verticalmente */
+    transform: translateY(-50%); /* Ajusta verticalmente */
+    opacity: 0; /* Torna o checkbox invisível */
+    width: 50px;
+}
+
+.list-config label {
+    display: inline-block;
+    padding-left: 60px; /* Ajuste conforme necessário para acomodar o espaço para a imagem */
+    background-repeat: no-repeat;
+    background-size: 20px; /* Ajuste o tamanho da imagem */
+    background-position: left center;
+    height: 30px; /* Ajuste conforme necessário */
+    line-height: 30px; /* Ajuste conforme necessário */
+    cursor: pointer; /* Altera o cursor para indicar que é clicável */
+}
+
+.list-config input[type="checkbox"]:checked + label {
+    background-image: url('/img/lynxsgoo/on.svg');
+    background-size: 50px;
+}
+
+.list-config input[type="checkbox"]:not(:checked) + label {
+    background-image: url('/img/lynxsgoo/off.svg');
+    background-size: 50px;
+}
+
+.update-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 300px;
+    text-align: left;
+}
+
+.botao-imagem-cadastro {
+    height: 100px;
+    width: 100px;
+}
+
+.cadastro-container {
+    margin: 0 auto; /* Isso centraliza a div horizontalmente */
+    max-width: 400px; /* Ajuste conforme necessário para o seu layout */
+    text-align: center;
+}
+
+#btnConfirmar {
+    display: none;
+    background-color: #0B9F9F;
+    border: 1px solid black;
+    border-radius: 5px;
+    color: white;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin-top: 5%;
+    margin-left: 30%;
+}
+
+#btnConfirmar:hover {
+    background-color: #0A8E8E;
+}

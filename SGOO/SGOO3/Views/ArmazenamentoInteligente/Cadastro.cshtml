@@ -1,0 +1,220 @@
+﻿@model SGOO3.Models.Entities.Balanca
+@{
+    ViewData["Title"] = "Cadastro";
+    Layout = "~/Views/Shared/_LayoutDashboard.cshtml";
+}
+<link src="~/js/jquery.min.js" rel="stylesheet" />
+<script src="~/js/jquery.min.js"></script>
+<link href="~/css/Configuracao.css" rel="stylesheet">
+
+<div class="top-bar">
+    <button class="back-button" onclick="backButtonClick()">
+        <img src="~/img/lynxsgoo/back_icon.svg" alt="Ícone" class="botao-imagem">
+        Voltar
+    </button>
+</div>
+
+<!-- Estrutura da página -->
+<div>
+    <div class="update-container">
+        <span class="cadastro-span">CADASTRO E UPDATE</span>
+        <!-- Imagem na direita -->
+        <div class="image-container">
+            <img src="~/img/lynxsgoo/cadastro.svg" alt="Ícone" class="botao-imagem-cadastro">
+        </div>
+    </div>
+    <div class="cadastro-container">
+        <div id="cadastroForm">
+            <div class="form-group">
+                <label for="balanca">Balança:</label>
+                <select id="balanca" class="form-control" onchange="mostrarCampos()">
+                    <option value="">Selecione uma Balança</option>
+                    @foreach (var balanca in Model.Balancas)
+                    {
+                        <option value="@balanca.id">@($"Balança {balanca.BalancaId}")</option>
+                    }
+                </select>
+            </div>
+
+            <!-- Campos que aparecerão após selecionar uma balança -->
+            <div id="camposExtras" style="display: none;">
+                <div class="form-group">
+                    <label for="nomeProduto">Nome do Produto:</label>
+                    <input type="text" id="nomeProduto" class="form-control" />
+                </div>
+                <div class="form-group">
+                    <label for="quantidadeMinima">Quantidade Mínima:</label>
+                    <input type="text" id="quantidadeMinima" class="form-control" />
+                </div>
+            </div>
+            <button id="btnConfirmar" onclick="confirmarCadastro()">
+                <img src="~/img/lynxsgoo/confirmed.svg" alt="Ícone" class="botao-imagem">
+                Confirmar
+            </button>
+        </div>
+    </div>
+</div>
+
+<script>
+    function mostrarCampos() {
+        var select = document.getElementById("balanca");
+        var camposExtras = document.getElementById("camposExtras");
+        var btnConfirmar = document.getElementById("btnConfirmar");
+
+        // Mostra os campos extras apenas se uma balança for selecionada
+        camposExtras.style.display = select.value !== "" ? "block" : "none";
+        btnConfirmar.style.display = select.value !== "" ? "block" : "none";
+    }
+
+    function validarNomeProduto(nomeProduto) {
+        // Expressão regular para verificar se o nome do produto contém apenas letras e espaços
+        var regex = /^[a-zA-ZÀ-ÖØ-öø-ÿ\s]+$/;
+        return regex.test(nomeProduto);
+    }
+
+
+    function validarQuantidadeMinima(quantidadeMinima) {
+        // Expressão regular para verificar se a quantidade mínima é um número
+        var regex = /^\d+$/;
+        return regex.test(quantidadeMinima);
+    }
+
+
+    function confirmarCadastro() {
+        var nomeProduto = document.getElementById("nomeProduto").value;
+        var quantidadeMinima = document.getElementById("quantidadeMinima").value;
+        if (nomeProduto.trim() === '' || quantidadeMinima.trim() === '') {
+            openModalAttention();
+            return false;
+        }
+        // Validar o nome do produto
+        if (!validarNomeProduto(nomeProduto)) {
+            openModalErro("Nome do produto inválido. Deve conter apenas letras.");
+            return false;
+        }
+
+        // Validar a quantidade mínima
+        if (!validarQuantidadeMinima(quantidadeMinima)) {
+            openModalErro("Quantidade mínima inválida. Deve ser um número.");
+            return false;
+        }
+
+        $.ajax({
+            type: "POST",
+            url: '@Url.Action("RegisterProduct", "ArmazenamentoInteligente")',
+            data: {
+                balancaId: $("#balanca").val(),
+                nomeProduto: nomeProduto,
+                quantidadeMinima: quantidadeMinima
+            },
+            success: function (data) {
+                if (data.success) {
+                    // Lógica de sucesso, se necessário
+                    openModalSucesso(data.message);
+                    sendArduinoData();
+                } else {
+                    if (data.message.includes("Já existe um produto cadastrado para esta balança.")) {
+                        // Produto já existe, open the update modal
+                        openModalUpdate(data.existingProductName);
+                        sendArduinoData();
+                    } else {
+                        // Lógica de tratamento de erro, se necessário
+                        openModalErro(data.message);
+                    }
+                }
+            },
+            error: function (error) {
+                // Lógica de tratamento de erro, se necessário
+                openModalErro(error.responseJSON.message);
+            }
+        });
+    }
+
+    $(document).ready(function () {
+        $('#btnYes').on('click', function () {
+            clearBalanceData();
+
+            $('#modalRegistrationLayout').modal('hide');
+        });
+        $('#btnUpdate').on('click', function () {
+            UpdateProduct();
+            $('#modalUpdateLayout').modal('hide');
+        });
+    });
+
+    function clearBalanceData() {
+        $.ajax({
+            type: "POST",
+            url: '@Url.Action("clearBalanceData", "ArmazenamentoInteligente")', // Substitua 'YourController' pelo nome real da sua controladora
+            data: {
+                balanceId: $("#balanca").val()
+            },
+            success: function (data) {
+                // Lógica de sucesso, se necessário
+                openModalSucesso(data.message);
+            },
+            error: function (error) {
+                // Lógica de tratamento de erro, se necessário
+                openModalErro(error.responseJSON.message);
+            }
+        });
+    }
+    function UpdateProduct() {
+        var nomeProduto = document.getElementById("nomeProduto").value;
+        var quantidadeMinima = document.getElementById("quantidadeMinima").value;
+        $.ajax({
+            type: "POST",
+            url: '@Url.Action("UpdateProduct", "ArmazenamentoInteligente")', // Substitua 'YourController' pelo nome real da sua controladora
+            data: {
+                balancaId: $("#balanca").val(),
+                nomeProduto: nomeProduto,
+                quantidadeMinima: quantidadeMinima
+            },
+            success: function (data) {
+                // Lógica de sucesso, se necessário
+                openModalSucesso(data.message);
+                sendArduinoData();
+            },
+            error: function (error) {
+                // Lógica de tratamento de erro, se necessário
+                openModalErro(error.responseJSON.message);
+            }
+        });
+    }
+    function backButtonClick() {
+        var origin = getParameterByName('origin');
+        if (origin === 'home') {
+            window.location.href = '/ArmazenamentoInteligente/Home';
+        } else if (origin === 'homeDisconnected') {
+            window.location.href = '/ArmazenamentoInteligente/HomeDisconnected';
+        } else {
+            // Se o parâmetro 'origin' não estiver definido, voltar uma página no histórico
+            window.history.back();
+        }
+    }
+
+    function getParameterByName(name) {
+        name = name.replace(/[\[\]]/g, "\\$&");
+        var regex = new RegExp("[?&]" + name + "=([^&#]*)");
+        var results = regex.exec(window.location.search);
+        if (!results) return null;
+        return decodeURIComponent(results[1].replace(/\+/g, " "));
+    }
+    function sendArduinoData() {
+
+        var selectedDeviceId = localStorage.getItem('selectedDeviceId');
+
+        $.ajax({
+            url: '@Url.Action("SendDataToArduino", "ArmazenamentoInteligente")',
+            type: 'GET',
+            data: { deviceId: selectedDeviceId }, // Passa o ID do produto para a Controller
+            success: function (data) {
+                console.log(data);
+            },
+            error: function (error) {
+                // Lide com o erro se necessário
+                console.log("erro");
+            }
+        });
+    }
+</script>

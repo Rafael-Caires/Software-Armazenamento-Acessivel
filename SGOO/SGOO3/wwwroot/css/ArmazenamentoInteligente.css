@@ -1,0 +1,189 @@
+﻿
+.Home-container{
+    height: auto;
+    width: 100%;
+    overflow: auto;
+}
+
+.back-button {
+    background-color: #0B9F9F;
+    border: 1px solid black;
+    border-radius: 10px;
+    color: white;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin-top: 2%;
+    margin-left: 5%;
+    width: 30%;
+}
+
+.back-button:hover {
+    background-color: #0A8E8E;
+}
+
+.read-list-button {
+    background-color: #0B9F9F;
+    border: 1px solid black;
+    border-radius: 10px;
+    color: white;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin-top: 2%;
+    margin-left: 5%;
+    width: 30%;
+    display: flex;
+    justify-content: left;
+    width: auto;
+    margin-left: 10%;
+}
+
+.read-list-button:hover {
+    background-color: #0A8E8E;
+}
+
+.add-product-button {
+    background-color: #0B9F9F;
+    border: 1px solid black;
+    border-radius: 10px;
+    color: white;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin-top: 2%;
+    margin-left: 5%;
+    width: 30%;
+    display: flex;
+    justify-content: left;
+    width: auto;
+    margin-left: 10%;
+}
+
+.bluetooth-info-homeDisconnected:hover {
+    background-color: #0A8E8E;
+}
+
+.bluetooth-info-homeDisconnected {
+    background-color: #0B9F9F;
+    border: 1px solid black;
+    border-radius: 10px;
+    color: white;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin-top: 2%;
+    margin-left: 5%;
+    width: 30%;
+    display: flex;
+    justify-content: left;
+    width: auto;
+    margin-left: 10%;
+}
+
+.add-product-button:hover {
+    background-color: #0A8E8E;
+}
+
+.settings-button {
+    background-color: #0B9F9F;
+    border: 1px solid black;
+    border-radius: 10px;
+    color: white;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin-top: 2%;
+    width: 30%;
+    float: right;
+    margin-right: 5%;
+}
+
+.settings-button:hover {
+    background-color: #0A8E8E;
+}
+
+.botao-imagem {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    vertical-align: middle;
+    filter: invert(100%);
+}
+
+.botao-imagem-bluetooth {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+.botao-imagem-geladeira {
+    width: 130px;
+    height: 220px;
+    display: flex;
+    margin-left: -20%;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.header-h1 {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin-left: 15%;
+    justify-content: center;
+    font-weight: bold;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.header-img {
+    float: right;
+    margin-right: 10%; /* Ajuste conforme necessário */
+}
+
+.item-list {
+    text-align: left;
+    margin: 10px;
+    width: 80%;
+    justify-content: center;
+    display: inline-block;
+    margin-left: 10%;
+    margin-top: -3%;
+}
+
+.item {
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 5px;
+    text-align: center;
+    margin-top: 2%;
+}
+
+.container-span {
+    font-family: 'Monosserat', sans-serif;
+    font-size: 15px;    
+}
+
+.bluetooth-info {
+    display: flex;
+    align-items: center;
+    margin-left: 11%;
+    margin-top: 3%; 
+    border: none;
+    background: #E8E8E8;
+}
+
+
+.bluetooth-span {
+    display: flex;
+    flex-direction: column;
+}
+
+.container-span-bluetooth {
+    word-wrap: break-word;
+}
+
+

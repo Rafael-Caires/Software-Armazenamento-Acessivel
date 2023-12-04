@@ -1,0 +1,121 @@
+﻿@using Microsoft.AspNetCore.Identity
+@inject SignInManager<IdentityUser> SignInManager
+@inject UserManager<IdentityUser> UserManager
+
+
+@if (SignInManager.IsSignedIn(User))
+{
+<script type="text/javascript">
+    var user = '@User.Identity.Name';
+</script>
+
+    <ul class="navbar-nav">
+        <li class="nav-item">
+            <a class="nav-link text-dark" asp-area="Identity" asp-page="/Account/Manage/Index" title="Manage">Olá @User.Identity.Name!</a>
+        </li>
+        <li class="nav-item">
+            <form class="form-inline" asp-area="Identity" asp-page="/Account/Logout" asp-route-returnUrl="@Url.Action("Index", "Home", new { area = "" })">
+                <button type="submit" class="nav-link btn btn-link text-dark">Sair</button>
+            </form>
+        </li>
+        <li class="nav-item">
+            <a href="#" class="notification" onclick="openModalNotification();">
+                <span><i class="fa fa-bell"></i></span>
+                <span class="badge" id="spanQtdNotification"></span>
+            </a>
+        </li>
+    </ul>
+    <ul class="navbar-nav flex-grow-1">
+
+        @if (SignInManager.IsSignedIn(User) && User.IsInRole("Admin"))
+        {
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarAdmin" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Administração
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarAdmin">
+                    <a class="nav-link text-dark" asp-controller="StackingMethods" asp-action="Index">Método de Empilhamento</a>
+                    <a class="nav-link text-dark" asp-controller="MachineTypes" asp-action="Index">Tipo de Máquina</a>
+                    <a class="nav-link text-dark" asp-controller="OrderTypes" asp-action="Index">Tipo de Ordem</a>
+                    <a class="nav-link text-dark" asp-controller="Status" asp-action="Index">Status</a>
+                    <a class="nav-link text-dark" asp-controller="Testes" asp-action="Index">Logs</a>
+                    <a class="nav-link text-dark" asp-controller="Testes" asp-action="Queue">Queues</a>
+                    <a class="nav-link text-dark" asp-controller="Testes" asp-action="SendJsonQueue">Enviar AMQ</a>
+                    <a class="nav-link text-dark" asp-controller="SystemParameters" asp-action="Index">Parâmetros do Sistema</a>
+                    <a class="nav-link text-dark" asp-controller="AmqQueueConfigs" asp-action="Index">Parâmetros de filas do GPV</a>
+                </div>
+            </li>
+        }
+
+        @if (SignInManager.IsSignedIn(User) && (User.IsInRole("Admin") || User.IsInRole("Gestor")))
+        {
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarCadastro" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Cadastros
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarCadastro">
+                    <a class="nav-link text-dark" asp-controller="ShipLoaders" asp-action="Index">Carregador de Navio</a>
+                    <a class="nav-link text-dark" asp-controller="Machines" asp-action="Index">Máquina</a>
+                    <a class="nav-link text-dark" asp-controller="Materials" asp-action="Index">Material</a>
+                    <a class="nav-link text-dark" asp-controller="Yards" asp-action="Index">Pátio</a>
+                    <a class="nav-link text-dark" asp-controller="Piers" asp-action="Index">Pier</a>
+                    <a class="nav-link text-dark" asp-controller="Stacks" asp-action="Index">Pilha</a>
+                    <a class="nav-link text-dark" asp-controller="Silos" asp-action="Index">Silo</a>
+                    <a class="nav-link text-dark" asp-controller="WagonDumpers" asp-action="Index">Virador</a>
+                    <a class="nav-link text-dark" asp-controller="UsersControllers" asp-action="Index">Usuário</a>
+                </div>
+            </li>
+
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarRelationship" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Relacionamentos
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarRelationship">
+                    <a class="nav-link text-dark" asp-controller="MaterialYards" asp-action="Index">Material/Pátio</a>
+                    <a class="nav-link text-dark" asp-controller="MaterialStacks" asp-action="Index">Material/Pilha</a>
+                    <a class="nav-link text-dark" asp-controller="YardMachines" asp-action="Index">Pátio/Máquina</a>
+                    <a class="nav-link text-dark" asp-controller="YardStacks" asp-action="Index">Pátio/Pilhas</a>
+                    <a class="nav-link text-dark" asp-controller="PierShipLoaders" asp-action="Index">Pier/Carregador de Navio</a>
+                    <a class="nav-link text-dark" asp-controller="OrderTypeMachineTypes" asp-action="Index">Tipo de Ordem/Tipo de Máquina</a>
+                    <a class="nav-link text-dark" asp-controller="StackingMethodMachines" asp-action="Index">Método de Empilhamento/Máquina</a>
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarQuality" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Qualidade
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarQuality">
+                    <a class="nav-link text-dark" asp-controller="Measures" asp-action="Index">Grandezas</a>
+                    <a class="nav-link text-dark" asp-controller="Samples" asp-action="Index">Amostras</a>
+                    <a class="nav-link text-dark" asp-controller="SampleMeasurements" asp-action="QualityMatrix">Matriz de Qualidade</a>
+                    <a class="nav-link text-dark" asp-controller="QualityloadersLotQuality" asp-action="Index">Importação</a>
+                </div>
+            </li>
+        }
+        <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarReports" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Relatórios
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarQuality">
+                <a class="nav-link text-dark" asp-controller="Reports" asp-action="CarregamentoTela">Carregamento</a>
+                <a class="nav-link text-dark" asp-controller="Reports" asp-action="EstocagemTela">Estocagem</a>
+                <a class="nav-link text-dark" asp-controller="Reports" asp-action="DiarioDeBordo">Diário de Bordo</a>
+            </div>
+        </li>
+        
+        <li class="nav-item">
+            <a class="nav-link text-dark" asp-area="" asp-controller="SGOO" asp-action="Index">Operação</a>
+        </li>
+
+
+    </ul>
+}
+else
+{
+    @*<ul class="navbar-nav">
+        <li class="nav-item">
+            <a class="nav-link text-dark" asp-area="Identity" asp-page="/Account/Login">Entrar</a>
+        </li>
+    </ul>*@
+}
+

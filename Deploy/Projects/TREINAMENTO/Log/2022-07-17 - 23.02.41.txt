@@ -1,0 +1,140 @@
+﻿23:02:41,342 DEBUG Bootstrapper - [MessageHubModule] Loading...
+23:02:41,351 INFO  Bootstrapper - [MessageHubModule] Loaded.
+23:02:41,351 DEBUG Bootstrapper - [ObjectsModule] Loading...
+23:02:41,384 INFO  Bootstrapper - [ObjectsModule] Loaded.
+23:02:41,384 DEBUG Bootstrapper - [ObjectsServiceModule] Loading...
+23:02:41,385 INFO  Bootstrapper - [ObjectsServiceModule] Loaded.
+23:02:41,385 DEBUG Bootstrapper - [DataBridgeModule] Loading...
+23:02:41,385 INFO  DataBridgeModule - Starting thread 'Main'...
+23:02:41,386 INFO  DataBridgeModule - Thread 'Main' started.
+23:02:41,389 INFO  Bootstrapper - [DataBridgeModule] Loaded.
+23:02:41,389 DEBUG Bootstrapper - [DataLogModule] Loading...
+23:02:41,389 INFO  DataLogModule - Starting thread 'Main'...
+23:02:41,389 INFO  DataLogModule - Thread 'Main' started.
+23:02:41,405 INFO  Bootstrapper - [DataLogModule] Loaded.
+23:02:41,405 DEBUG Bootstrapper - [DataModule] Loading...
+23:02:41,436 INFO  Bootstrapper - [DataModule] Loaded.
+23:02:41,436 DEBUG Bootstrapper - [DataServiceModule] Loading...
+23:02:41,436 INFO  Bootstrapper - [DataServiceModule] Loaded.
+23:02:41,436 DEBUG Bootstrapper - [ExpressionModule] Loading...
+23:02:41,436 INFO  ExpressionModule - Starting thread 'Main'...
+23:02:41,437 INFO  ExpressionModule - Thread 'Main' started.
+23:02:41,441 INFO  Bootstrapper - [ExpressionModule] Loaded.
+23:02:41,441 DEBUG Bootstrapper - [Log4NetModule] Loading...
+23:02:41,441 INFO  Bootstrapper - [Log4NetModule] Loaded.
+23:02:41,441 DEBUG Bootstrapper - [FileTransferServiceModule] Loading...
+23:02:41,441 INFO  Bootstrapper - [FileTransferServiceModule] Loaded.
+23:02:41,441 DEBUG Bootstrapper - [MessageHubModule] Initializing...
+23:02:41,442 INFO  Bootstrapper - [MessageHubModule] Initialized.
+23:02:41,442 DEBUG Bootstrapper - [ObjectsModule] Initializing...
+23:02:41,442 INFO  Bootstrapper - [ObjectsModule] Initialized.
+23:02:41,442 DEBUG Bootstrapper - [ObjectsServiceModule] Initializing...
+23:02:41,442 INFO  Bootstrapper - [ObjectsServiceModule] Initialized.
+23:02:41,442 DEBUG Bootstrapper - [DataBridgeModule] Initializing...
+23:02:41,442 INFO  MessageHubModule - Server started on port 10111
+23:02:41,446 INFO  ExpressionModule - Starting thread 'DEFAULT'...
+23:02:41,447 INFO  ExpressionModule - Thread 'DEFAULT' started.
+23:02:41,464 INFO  Bootstrapper - [DataBridgeModule] Initialized.
+23:02:41,464 DEBUG Bootstrapper - [DataLogModule] Initializing...
+23:02:41,464 INFO  Bootstrapper - [DataLogModule] Initialized.
+23:02:41,464 DEBUG Bootstrapper - [DataModule] Initializing...
+23:02:41,471 INFO  Bootstrapper - [DataModule] Initialized.
+23:02:41,471 DEBUG Bootstrapper - [DataServiceModule] Initializing...
+23:02:41,471 INFO  Bootstrapper - [DataServiceModule] Initialized.
+23:02:41,471 DEBUG Bootstrapper - [ExpressionModule] Initializing...
+23:02:41,471 INFO  Bootstrapper - [ExpressionModule] Initialized.
+23:02:41,471 DEBUG Bootstrapper - [Log4NetModule] Initializing...
+23:02:41,471 INFO  Bootstrapper - [Log4NetModule] Initialized.
+23:02:41,471 DEBUG Bootstrapper - [FileTransferServiceModule] Initializing...
+23:02:41,471 INFO  Bootstrapper - [FileTransferServiceModule] Initialized.
+23:02:41,471 DEBUG Bootstrapper - [TransformsModule] Loading...
+23:02:41,471 INFO  TransformsModule - Starting thread 'Main'...
+23:02:41,472 INFO  TransformsModule - Thread 'Main' started.
+23:02:41,475 INFO  Bootstrapper - [TransformsModule] Loaded.
+23:02:41,475 DEBUG Bootstrapper - [Studio3DModule] Loading...
+23:02:41,475 INFO  Studio3DModule - Starting thread 'Main'...
+23:02:41,476 INFO  Studio3DModule - Thread 'Main' started.
+23:02:41,479 INFO  Bootstrapper - [Studio3DModule] Loaded.
+23:02:41,480 DEBUG Bootstrapper - [TransformsModule] Initializing...
+23:02:41,480 INFO  Bootstrapper - [TransformsModule] Initialized.
+23:02:41,480 DEBUG Bootstrapper - [Studio3DModule] Initializing...
+23:02:41,480 INFO  Bootstrapper - [Studio3DModule] Initialized.
+23:02:51,670 INFO  MessageHubModule - Client 127.0.0.1:50046: connected
+23:02:56,715 INFO  MessageHubModule - Client 127.0.0.1:50051: connected
+23:02:56,718 INFO  MessageHubModule - Client 127.0.0.1:50046: disconnected
+23:02:57,870 INFO  MessageHubModule - Client 127.0.0.1:50046: app='LynxBuilder', user='admin', user_success='no', version_success='yes'
+23:03:01,748 INFO  MessageHubModule - Client 127.0.0.1:50051: disconnected
+23:03:01,750 INFO  MessageHubModule - Client 127.0.0.1:50056: connected
+23:03:02,825 INFO  MessageHubModule - Client 127.0.0.1:50051: app='LynxBuilder', user='admin', user_success='no', version_success='yes'
+23:03:06,789 INFO  MessageHubModule - Client 127.0.0.1:50056: disconnected
+23:03:06,790 INFO  MessageHubModule - Client 127.0.0.1:50062: connected
+23:03:07,851 INFO  MessageHubModule - Client 127.0.0.1:50056: app='LynxBuilder', user='admin', user_success='no', version_success='yes'
+23:03:09,422 INFO  MessageHubModule - Client 127.0.0.1:50065: connected
+23:03:11,841 INFO  MessageHubModule - Client 127.0.0.1:50062: disconnected
+23:03:11,842 INFO  MessageHubModule - Client 127.0.0.1:50070: connected
+23:03:12,914 INFO  MessageHubModule - Client 127.0.0.1:50062: app='LynxBuilder', user='admin', user_success='no', version_success='yes'
+23:03:14,473 INFO  MessageHubModule - Client 127.0.0.1:50065: disconnected
+23:03:14,473 INFO  MessageHubModule - Client 127.0.0.1:50075: connected
+23:03:15,567 INFO  MessageHubModule - Client 127.0.0.1:50065: app='LynxBuilder', user='admin', user_success='no', version_success='yes'
+23:03:16,904 INFO  MessageHubModule - Client 127.0.0.1:50070: disconnected
+23:03:16,905 INFO  MessageHubModule - Client 127.0.0.1:50080: connected
+23:03:17,966 INFO  MessageHubModule - Client 127.0.0.1:50070: app='LynxBuilder', user='admin', user_success='no', version_success='yes'
+23:03:18,774 INFO  MessageHubModule - Client 127.0.0.1:50075: disconnected
+23:03:18,775 INFO  MessageHubModule - Client 127.0.0.1:50080: disconnected
+23:03:20,629 INFO  MessageHubModule - Client 127.0.0.1:50075: app='LynxBuilder', user='admin', user_success='no', version_success='yes'
+23:03:23,033 INFO  MessageHubModule - Client 127.0.0.1:50080: app='LynxBuilder', user='admin', user_success='no', version_success='yes'
+23:03:28,618 INFO  MessageHubModule - Client 127.0.0.1:50088: connected
+23:03:33,652 INFO  MessageHubModule - Client 127.0.0.1:50088: disconnected
+23:03:33,652 INFO  MessageHubModule - Client 127.0.0.1:50093: connected
+23:03:34,757 INFO  MessageHubModule - Client 127.0.0.1:50088: app='LynxBuilder', user='admin', user_success='no', version_success='yes'
+23:03:38,694 INFO  MessageHubModule - Client 127.0.0.1:50093: disconnected
+23:03:38,697 INFO  MessageHubModule - Client 127.0.0.1:50099: connected
+23:03:39,801 INFO  MessageHubModule - Client 127.0.0.1:50093: app='LynxBuilder', user='admin', user_success='no', version_success='yes'
+23:03:43,751 INFO  MessageHubModule - Client 127.0.0.1:50099: disconnected
+23:03:43,752 INFO  MessageHubModule - Client 127.0.0.1:50104: connected
+23:03:44,842 INFO  MessageHubModule - Client 127.0.0.1:50099: app='LynxBuilder', user='admin', user_success='no', version_success='yes'
+23:03:48,806 INFO  MessageHubModule - Client 127.0.0.1:50104: disconnected
+23:03:48,807 INFO  MessageHubModule - Client 127.0.0.1:50109: connected
+23:03:49,879 INFO  MessageHubModule - Client 127.0.0.1:50104: app='LynxBuilder', user='admin', user_success='no', version_success='yes'
+23:03:53,846 INFO  MessageHubModule - Client 127.0.0.1:50109: disconnected
+23:03:53,847 INFO  MessageHubModule - Client 127.0.0.1:50114: connected
+23:03:54,936 INFO  MessageHubModule - Client 127.0.0.1:50109: app='LynxBuilder', user='admin', user_success='no', version_success='yes'
+23:03:58,876 INFO  MessageHubModule - Client 127.0.0.1:50114: disconnected
+23:03:58,878 INFO  MessageHubModule - Client 127.0.0.1:50119: connected
+23:03:59,978 INFO  MessageHubModule - Client 127.0.0.1:50114: app='LynxBuilder', user='admin', user_success='no', version_success='yes'
+23:04:03,928 INFO  MessageHubModule - Client 127.0.0.1:50119: disconnected
+23:04:03,929 INFO  MessageHubModule - Client 127.0.0.1:50124: connected
+23:04:05,016 INFO  MessageHubModule - Client 127.0.0.1:50119: app='LynxBuilder', user='admin', user_success='no', version_success='yes'
+23:04:08,964 INFO  MessageHubModule - Client 127.0.0.1:50124: disconnected
+23:04:08,964 INFO  MessageHubModule - Client 127.0.0.1:50134: connected
+23:04:09,985 INFO  MessageHubModule - Client 127.0.0.1:50124: app='LynxBuilder', user='admin', user_success='no', version_success='yes'
+23:04:10,951 INFO  MessageHubModule - Client 127.0.0.1:50137: connected
+23:04:14,000 INFO  MessageHubModule - Client 127.0.0.1:50134: disconnected
+23:04:14,001 INFO  MessageHubModule - Client 127.0.0.1:50142: connected
+23:04:15,043 INFO  MessageHubModule - Client 127.0.0.1:50134: app='LynxBuilder', user='admin', user_success='no', version_success='yes'
+23:04:16,981 INFO  MessageHubModule - Client 127.0.0.1:50137: disconnected
+23:04:16,982 INFO  MessageHubModule - Client 127.0.0.1:50147: connected
+23:04:17,089 INFO  MessageHubModule - Client 127.0.0.1:50137: app='LynxBuilder', user='admin', user_success='no', version_success='yes'
+23:04:19,039 INFO  MessageHubModule - Client 127.0.0.1:50142: disconnected
+23:04:19,040 INFO  MessageHubModule - Client 127.0.0.1:50151: connected
+23:04:20,104 INFO  MessageHubModule - Client 127.0.0.1:50142: app='LynxBuilder', user='admin', user_success='no', version_success='yes'
+23:04:22,007 INFO  MessageHubModule - Client 127.0.0.1:50147: disconnected
+23:04:22,008 INFO  MessageHubModule - Client 127.0.0.1:50156: connected
+23:04:23,099 INFO  MessageHubModule - Client 127.0.0.1:50147: app='LynxBuilder', user='admin', user_success='no', version_success='yes'
+23:04:24,083 INFO  MessageHubModule - Client 127.0.0.1:50151: disconnected
+23:04:24,085 INFO  MessageHubModule - Client 127.0.0.1:50160: connected
+23:04:25,177 INFO  MessageHubModule - Client 127.0.0.1:50151: app='LynxBuilder', user='admin', user_success='no', version_success='yes'
+23:04:27,065 INFO  MessageHubModule - Client 127.0.0.1:50156: disconnected
+23:04:27,066 INFO  MessageHubModule - Client 127.0.0.1:50165: connected
+23:04:27,612 INFO  MessageHubModule - Client 127.0.0.1:50160: disconnected
+23:04:28,111 INFO  MessageHubModule - Client 127.0.0.1:50156: app='LynxBuilder', user='admin', user_success='no', version_success='yes'
+23:04:30,228 INFO  MessageHubModule - Client 127.0.0.1:50160: app='LynxBuilder', user='admin', user_success='no', version_success='yes'
+23:04:32,099 INFO  MessageHubModule - Client 127.0.0.1:50165: disconnected
+23:04:32,101 INFO  MessageHubModule - Client 127.0.0.1:50172: connected
+23:04:33,165 INFO  MessageHubModule - Client 127.0.0.1:50165: app='LynxBuilder', user='admin', user_success='no', version_success='yes'
+23:04:37,127 INFO  MessageHubModule - Client 127.0.0.1:50172: disconnected
+23:04:37,128 INFO  MessageHubModule - Client 127.0.0.1:50179: connected
+23:04:38,175 INFO  MessageHubModule - Client 127.0.0.1:50172: app='LynxBuilder', user='admin', user_success='no', version_success='yes'
+23:04:42,169 INFO  MessageHubModule - Client 127.0.0.1:50179: disconnected
+23:04:42,170 INFO  MessageHubModule - Client 127.0.0.1:50185: connected
+23:04:43,285 INFO  MessageHubModule - Client 127.0.0.1:50179: app='LynxBuilder', user='admin', user_success='no', version_success='yes'

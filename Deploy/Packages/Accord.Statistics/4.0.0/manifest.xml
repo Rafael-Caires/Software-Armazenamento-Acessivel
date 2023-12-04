@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PackageManifest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Name>Accord.Statistics</Name>
+  <PlatformVersion>3.5</PlatformVersion>
+  <Version>4.0.0</Version>
+  <Dependencies>
+    <Package>
+      <Name>Accord</Name>
+      <Version>4.0</Version>
+    </Package>
+    <Package>
+      <Name>Accord.Math</Name>
+      <Version>4.0</Version>
+    </Package>
+  </Dependencies>
+</PackageManifest>

@@ -1,0 +1,274 @@
+﻿@using Microsoft.AspNetCore.Identity
+@using SGOO3.Hubs
+@using System.Collections
+@using Microsoft.Extensions.Configuration
+@inject IConfiguration Configuration
+@inject SignInManager<IdentityUser> SignInManager
+@inject UserManager<IdentityUser> UserManager
+
+
+<link src="~/js/jquery.min.js" rel="stylesheet" />
+<ul class="navbar-nav sidebar sidebar-dark accordion toggled" id="accordionSidebar" style="background-color:#4C6CB3;border-top-right-radius:60px">
+    <!-- Sidebar - Brand -->
+    <a class="sidebar-brand d-flex align-items-center justify-content-center" asp-controller="Home" asp-action="Index">
+        <div class="sidebar-brand-icon">
+            <img src="~/img/lynxsgoo/LOGO_LYNX_SGOO.svg" style="padding: 25%; width: 100%; margin-top: 3%;" />
+        </div>
+    </a>
+    <!-- Divider -->
+    <hr class="sidebar-divider my-0" />
+    <!-- Nav Item - Dashboard -->
+    <li class="nav-item active">
+        <a class="nav-link" asp-controller="Home" asp-action="Index">
+            <i class="fas fa-fw fa-tachometer-alt"></i>
+            <span>Dashboard</span>
+        </a>
+    </li>
+
+    <li class="nav-item active">
+        <a class="nav-link" asp-area="lqs" asp-controller="Home" asp-action="Index">
+            <i class="fas fa-fw fa-tachometer-alt"></i>
+            <span>LQS</span>
+        </a>
+    </li>
+
+        <!-- Divider -->
+        <hr class="sidebar-divider" />
+
+        <!-- Heading -->
+        <div class="sidebar-heading">
+            Admin
+        </div>
+        <!-- Configurações -->
+        <li class="nav-item">
+            <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapse1"
+        aria-expanded="true" aria-controls="collapse1">
+                <i class="fas fa-fw fa-cog"></i>
+                <span>Configurações</span>
+            </a>
+            <div id="collapse1" class="collapse" data-parent="#accordionSidebar">
+                <div class="bg-white py-2 collapse-inner rounded">
+                    <h6 class="collapse-header">Configurações:</h6>
+                    <a class="collapse-item" asp-controller="MachineTypes" asp-action="Index">Tipo de Máquina</a>
+                    <a class="collapse-item" asp-controller="OrderTypes" asp-action="Index">Tipo de Ordem</a>
+                    <a class="collapse-item" asp-controller="Status" asp-action="Index">Status</a>
+                    <a class="collapse-item" asp-controller="Listeners" asp-action="Index">Configurações do Listener</a>
+                </div>
+            </div>
+
+        </li>
+        <!-- Testes -->
+        <li class="nav-item">
+            <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapse6"
+        aria-expanded="true" aria-controls="collapse6">
+                <i class="fas fa-fw fa-bug"></i>
+                <span>Testes</span>
+            </a>
+            <div id="collapse6" class="collapse" data-parent="#accordionSidebar">
+                <div class="bg-white py-2 collapse-inner rounded">
+                    <h6 class="collapse-header">Configurações:</h6>
+                    <a class="collapse-item" asp-controller="Testes" asp-action="Index">Logs</a>
+                    <a class="collapse-item" asp-controller="Testes" asp-action="Queue">Get Queue</a>
+                    <a class="collapse-item" asp-controller="Testes" asp-action="SendJsonQueue">Post Queue</a>
+                    <a class="collapse-item" asp-controller="Testes" asp-action="DeleteQueue">Delete Queue</a>
+                    <a class="collapse-item" asp-controller="Testes" asp-action="SignalRTeste">SignalR</a>
+                    <a class="collapse-item" asp-controller="Testes" asp-action="OrderGenerator">OrderGenerator</a>
+                </div>
+            </div>
+        </li>
+        <!-- Divider -->
+        <hr class="sidebar-divider" />
+        <!-- Heading -->
+        <div class="sidebar-heading">
+            Gestor
+        </div>
+        <!-- Cadastros -->
+        <li class="nav-item">
+            <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapse2"
+        aria-expanded="true" aria-controls="collapse2">
+                <i class="fas fa-fw fa-database"></i>
+                <span>Cadastros</span>
+            </a>
+            <div id="collapse2" class="collapse" data-parent="#accordionSidebar">
+                <div class="bg-white py-2 collapse-inner rounded">
+                    <h6 class="collapse-header">Cadastros:</h6>
+                    <a class="collapse-item" asp-controller="UsersControllers" asp-action="Index">Bluetooth</a>
+                    <a class="collapse-item" asp-controller="Machines" asp-action="Index">Máquina</a>
+                    <a class="collapse-item" asp-controller="Materials" asp-action="Index">Material</a>
+                    <a class="collapse-item" asp-controller="StackingMethods" asp-action="Index">Método de Empilhamento</a>
+                    <a class="collapse-item" asp-controller="Yards" asp-action="Index">Pátio</a>
+                    <a class="collapse-item" asp-controller="Stacks" asp-action="Index">Pilha</a>
+                    <a class="collapse-item" asp-controller="OperationStations" asp-action="Index">Estação de Operação</a>
+                    <a class="collapse-item" asp-controller="SystemParameters" asp-action="Index">Parâmetros do Sistema</a>
+                    <a class="collapse-item" asp-controller="AmqQueueConfigs" asp-action="Index">Parâmetros das Filas do GPV</a>
+                    <a class="collapse-item" asp-controller="Justify" asp-action="Index">Justificativa</a>
+
+                    @if (User.IsInRole("Perfil Global") || User.IsInRole("Perfil Mina"))
+                    {
+                        <hr />
+                        <p class="sidebar-heading" style="color: #848484;">Mina</p>
+                        <a class="collapse-item" asp-controller="Silos" asp-action="Index">Silo</a>
+                        <a class="collapse-item" asp-controller="Factory" asp-action="Index">Usina</a>
+                    }
+
+                    @if (User.IsInRole("Perfil Global") || User.IsInRole("Perfil Porto"))
+                    {
+                        <hr />
+                        <p class="sidebar-heading" style="color: #848484;">Porto</p>
+                        <a class="collapse-item" asp-controller="Area" asp-action="Index">Área</a>
+                        <a class="collapse-item" asp-controller="Piers" asp-action="Index">Pier</a>
+                        <a class="collapse-item" asp-controller="ShipLoaders" asp-action="Index">Carregador de Navio</a>
+                        <a class="collapse-item" asp-controller="WagonDumpers" asp-action="Index">Virador</a>
+                    }
+                </div>
+            </div>
+        </li>
+        <!-- Relacionamentos -->
+        <li class="nav-item">
+            <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapse3"
+        aria-expanded="true" aria-controls="collapse3">
+                <i class="fas fa-fw fa-handshake"></i>
+                <span>Relacionamentos</span>
+            </a>
+            <div id="collapse3" class="collapse" data-parent="#accordionSidebar">
+                <div class="bg-white py-2 collapse-inner rounded">
+                    <h6 class="collapse-header">Relacionamentos:</h6>
+                    <a class="collapse-item" asp-controller="MaterialYards" asp-action="Index">Material/Pátio</a>
+                    <a class="collapse-item" asp-controller="MaterialStacks" asp-action="Index">Material/Pilha</a>
+                    <a class="collapse-item" asp-controller="MaterialSilo" asp-action="Index">Material/Silo</a>
+                    <a class="collapse-item" asp-controller="YardMachines" asp-action="Index">Pátio/Máquina</a>
+                    <a class="collapse-item" asp-controller="OrderTypeMachineTypes" asp-action="Index">Tipo Ordem/Máquina</a>
+                    <a class="collapse-item" asp-controller="StackingMethodMachines" asp-action="Index">Empilhamento/Máquina</a>
+                    <a class="collapse-item" asp-controller="StackingMethodYard" asp-action="Index">Empilhamento/Pátio</a>
+                    <a class="collapse-item" asp-controller="StackMachines" asp-action="Index">Altura da Pilha</a>
+                    <a class="collapse-item" asp-controller="StackStackingMethods" asp-action="Index">Pilha/Empilhamento</a>
+                    <a class="collapse-item" asp-controller="StackingMethodStackHeights" asp-action="Index">Altura da Pilha /MP</a>
+
+                    @if (User.IsInRole("Perfil Global") || User.IsInRole("Perfil Porto"))
+                    {
+                        <hr />
+                        <a class="collapse-item" asp-controller="PierShipLoaders" asp-action="Index">Pier/Carregador de Navio</a>
+                    }
+                </div>
+            </div>
+
+        </li>
+        <!-- Qualidade -->
+        @*        <li class="nav-item">
+<a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapse4"
+aria-expanded="true" aria-controls="collapse4">
+<i class="fas fa-fw fa-chart-line"></i>
+<span>Qualidade</span>
+</a>
+<div id="collapse4" class="collapse" data-parent="#accordionSidebar">
+<div class="bg-white py-2 collapse-inner rounded">
+<h6 class="collapse-header">Qualidade:</h6>
+<a class="collapse-item" asp-controller="Measures" asp-action="Index">Grandezas</a>
+<a class="collapse-item" asp-controller="Samples" asp-action="Index">Amostras</a>
+<a class="collapse-item" asp-controller="SampleMeasurements" asp-action="QualityMatrix">Matriz da Qualidade</a>
+<a class="collapse-item" asp-controller="QualityloadersSheet" asp-action="Index">Importação da Planilha</a>
+<a class="collapse-item" asp-controller="QualityloadersLotQuality" asp-action="Index">Qualidade GPV</a>
+<a class="collapse-item" asp-controller="QualityMining" asp-action="Index">Qualidade GPV Mineração</a>
+</div>
+</div>
+</li>*@
+    
+
+    <!-- Divider -->
+    <hr class="sidebar-divider" />
+    <!-- Heading -->
+    <div class="sidebar-heading">
+        Operador
+    </div>
+    <!-- Operação -->
+    <li class="nav-item active">
+        <a class="nav-link" asp-controller="SGOO" asp-action="Index">
+            <i class="fas fa-fw fa-brain"></i>
+            <span>Operação</span>
+        </a>
+    </li>
+    <li class="nav-item active">
+        <a class="nav-link" asp-controller="SGOO" asp-action="JobOperation">
+            <i class="fas fa-fw fa-eye"></i>
+            <span>Operação por Job</span>
+        </a>
+    </li>
+    <li class="nav-item active">
+        <a class="nav-link" href="@Configuration.GetSection("configUrl")["qualityApplication"]">
+            <i class="fas fa-fw fa-globe"></i>
+            <span>Qualidade Web</span>
+        </a>
+    </li>
+
+    <!-- Relatórios -->
+    @*<hr class="sidebar-divider" />*@
+    <li class="nav-item">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapse5"
+        aria-expanded="true" aria-controls="collapse5">
+            <i class="fas fa-fw fa-file"></i>
+            <span>Relatórios</span>
+        </a>
+        <div id="collapse5" class="collapse" data-parent="#accordionSidebar">
+            <div class="bg-white py-2 collapse-inner rounded">
+                <h6 class="collapse-header">Relatórios:</h6>
+                <a class="collapse-item" asp-controller="Relatorios" asp-action="Estocagem">Estocagem</a>
+                <a class="collapse-item" asp-controller="Relatorios" asp-action="Carregamento">Carregamento</a>
+                <a class="collapse-item" asp-controller="Relatorios" asp-action="DiarioDeBordo">Diario de Bordo</a>
+                <a class="collapse-item" asp-controller="Relatorios" asp-action="PrevistoXRealizado">Previsto X Realizado</a>
+            </div>
+        </div>
+    </li>
+
+    <!-- Qualidade -->
+    @*<hr class="sidebar-divider" />*@
+    <li class="nav-item">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapse8"
+        aria-expanded="true" aria-controls="collapse8">
+            <i class="fas fa-fw fa-chart-line"></i>
+            <span>Qualidade</span>
+        </a>
+        <div id="collapse8" class="collapse" data-parent="#accordionSidebar">
+            <div class="bg-white py-2 collapse-inner rounded">
+                <h6 class="collapse-header">Qualidade:</h6>
+                <a class="collapse-item" asp-controller="Measures" asp-action="Index">Grandezas</a>
+                <a class="collapse-item" asp-controller="Samples" asp-action="Index">Amostras</a>
+                <a class="collapse-item" asp-controller="SampleMeasurements" asp-action="QualityMatrix">Matriz da Qualidade</a>
+                <a class="collapse-item" asp-controller="QualityloadersSheet" asp-action="Index">Importação da Planilha</a>
+                <hr />
+                @if (User.IsInRole("Perfil Global") || User.IsInRole("Perfil Mina"))
+                {
+                    <a class="collapse-item" asp-controller="QualityMining" asp-action="Index">Importação GPV-M</a>
+                    <a class="collapse-item" asp-controller="QualityloadersSheet" asp-action="CustomExport">Importação Excel-M</a>
+                }
+                @if (User.IsInRole("Perfil Global") || User.IsInRole("Perfil Porto"))
+                {
+                    <a class="collapse-item" asp-controller="QualityloadersLotQuality" asp-action="Index">Importação GPV-P</a>
+                }
+            </div>
+        </div>
+    </li>
+        <!-- Cadastros Operador-->
+    <li class="nav-item">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapse7"
+    aria-expanded="true" aria-controls="collapse7">
+            <i class="fas fa-fw fa-database"></i>
+            <span>Cadastros</span>
+        </a>
+        <div id="collapse7" class="collapse" data-parent="#accordionSidebar">
+            <div class="bg-white py-2 collapse-inner rounded">
+                <h6 class="collapse-header">Cadastros:</h6>
+                <a class="collapse-item" asp-controller="Stacks" asp-action="Index">Pilha</a>
+            </div>
+        </div>
+    </li>
+    
+
+    <!-- Divider -->
+    <hr class="sidebar-divider d-none d-md-block" />
+    <!-- Sidebar Toggler (Sidebar) -->
+    <div class="text-center d-none d-md-inline">
+        <button class="rounded-circle border-0" id="sidebarToggle"></button>
+    </div>
+</ul>
+
+

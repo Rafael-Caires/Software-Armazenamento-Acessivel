@@ -1,0 +1,499 @@
+﻿#newPlanButton {
+    height: 40px;
+    width: 165px;
+    color:white;
+    background-color: #28285A;
+    margin-right: 40px;
+    float: right;
+}
+    #newPlanButton::before {
+        color: white;
+    }
+
+#modalContent {
+    height: 700px;
+    margin-top:30px
+}
+
+
+#box {
+    height: 700px;
+    width: 300px;
+    background: #d33;
+    position: relative;
+    margin-top: 100px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.circle {
+    position: absolute;
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    border: 3px solid white;
+    left: 50%;
+    margin-left: -55px;
+    top: -32px;
+    background: #d1d1d1;
+}
+
+#plusIcon {
+    font-size: 40px;
+    margin-left: 27px;
+    margin-top: 27px;
+    color: #6F6F6F;
+}
+span.circleActive {
+    background: #F78D02;
+    border-radius: 50%;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    color: white;
+    font-size: 22px;
+    display: inline-block;
+    font-weight: bold;
+    line-height: 55px;
+    margin-right: 5px;
+    text-align: center;
+    width: 60px;
+    border: 3px solid #4C6CB3;
+    float: right;
+    position: relative;
+}
+span.circleInactive {
+    background: #4C6CB3;
+    border-radius: 50%;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    color: white;
+    font-size: 22px;
+    display: inline-block;
+    font-weight: bold;
+    line-height: 55px;
+    margin-right: 5px;
+    text-align: center;
+    width: 60px;
+    border: 3px solid #4C6CB3;
+    float: right;
+    position: relative;
+}
+
+#container-hatchquality{
+    display: flex;
+    height: 250px;
+    margin-left: 20px;
+    float: left;
+}
+
+
+#hatchquality-initial {
+    background-image: url('../../../img/qps/ship-initial.png');
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    background-size: 100% 50%;
+    float: left;
+    height: 100%;
+    width: 100px;
+}
+
+#hatchquality-end {
+    background-image: url('../../../img/qps/ship-end.png');
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    background-size: 100% 25%;
+    float: right;
+    height: 100%;
+    width: 70px;
+    margin-left: 02px;
+}
+
+.hatchquality-hatch {
+    background-image: url('../../../img/qps/ship-hatch.png');
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    background-size: 100% 25%;
+    float: left;
+    height: 100%;
+    width: 70px;
+    position: relative;
+    text-align: center;
+    margin-left:02px;
+}
+
+.hatchquality-hatchShip {
+    background: #DFDFDF;
+    border-radius: 8px 8px 0px 0px;
+    height: 70%;
+    width: 80%;
+    margin-left: 10%;
+    position: relative;
+    text-align: center;
+}
+
+.hatchquality-PlanMass {
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    height: 05%;
+    font-size: 11px;
+    text-align: center;
+    bottom: 1%;
+}
+
+    .hatchquality-PlanMass span {
+        color: #4C6CB3;
+        font-size: 11px;
+        margin-bottom: 2px;
+    }
+
+.hatchquality-hatchMass {
+    background: #4C6CB3;
+    border-radius: 8px 8px 0px 0px;
+    /*height: 75%;*/
+    width: 80%;
+    position: absolute;
+    bottom: 0;
+    left: 10%;
+}
+
+.hatchquality-MassTotal {
+    color: #4C6CB3;
+    position: absolute;
+    /*bottom: 75%;*/
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    font-size: 11px;
+}
+
+.hatchquality-hatchName {
+    color: #4C6CB3;
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    bottom: 1px;
+    left: 0;
+    right: 0;
+    font-size: 16px;
+    height: 57px;
+    width: 68px;
+}
+
+#rowPlanData {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    margin: 0 auto;
+}
+
+#resumePlan {
+    float: left;
+    width: 250px;    
+}
+
+#planTable {
+    border-collapse: unset;
+    width: 100%;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    height: 210px;
+}
+
+#planTitle {
+    font-size: 13px;
+    background-color: #FF7D00;
+    border-radius: 10px 10px 0px 0px;
+    color: #FFFFFF;
+    text-align: center;
+}
+
+.planData {
+    font-size: 13px;
+    background-color: #28285A;
+    color: #FFFFFF;
+}
+
+#result-container {
+    margin-top: 20px;
+    /*border: 1.11871px solid #28285A;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);*/
+    border-radius: 24px;
+    padding: 10px;
+    width: 100%;
+    height: auto;
+    /*max-height: 400px;*/
+}
+
+#expected_quality {
+    text-align: center;
+    /*overflow-y: auto;*/
+    width: 100%;
+    height: 100%;
+}
+
+#expected_quality_title {
+    background-color: #4C6CB3;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    height: 35px;
+    line-height: 35px;
+    width: 100%;
+    margin-bottom: 05px;
+    border-radius: 8px 8px 0px 0px;
+}
+
+#expected_quality_table_container{
+    max-height: 380px;
+    height: auto;
+    overflow-y: auto;
+}
+
+#quality-table {
+    margin-top: 0px;
+    font-size: 12px;
+    color: #28285A;
+    width: 100%;
+}
+
+    #quality-table tr {
+        border-bottom: 1px solid #E0E0E0;
+    }
+
+    #quality-table img {
+        margin-bottom: 04px;
+    }
+
+    #quality-table tbody span {
+        font-weight: normal;
+    }
+
+.tableQualityHatch img {
+    margin-left: 02px;
+}
+
+.btnHatchName {
+    border: none;
+}
+
+.btnHatchNameSelected {
+    background-color: #FF7D00;
+    color: white;
+}
+
+.delete_ButtonPlan {
+    width: 200px;
+    height: 35px;
+    font-size: 12px;
+    color: #28285A;
+    background: #FFFFFF;
+    border-radius: 05px;
+    border: 2px solid #28285A;
+    display: inline-block;
+    margin-left: -20px;
+    padding-top: 3px;
+}
+
+[data-tooltip] {
+    position: relative;
+    font-weight: bold;    
+}
+
+[data-tooltip]:after {
+    display: none;
+    position: absolute;
+    top: -15px;
+    padding: 5px;
+    border: solid #4C6CB3 1px;
+    border-radius: 3px;
+    left: calc(100% + 2px);
+    content: attr(data-tooltip);
+    white-space: nowrap;
+    background-color: #FFFFFF /*#0095ff*/;
+    color: #4C6CB3;
+    z-index: 1;
+    white-space: pre-line;
+    width: 105px;
+}
+
+[data-tooltip]:hover:after {
+    display: block;
+}
+
+.hatchQualityTitle {
+    vertical-align: middle !important;
+}
+#addNewPlanItem {
+    margin-left: 40px;
+    background-color: #28285A;
+    color: white;
+    height: 40px;
+    border-radius: 10px;
+    margin-right: 100px;
+}
+
+.deletePlanItems {
+    display: inline-block;
+}
+
+.addNewPlan {
+    display: inline-block;
+    float: right;
+
+}
+.addNewPlanIcon {
+    background-color: #28285A;
+    color: white;
+    height: 35px;
+    border-radius: 05px;
+    border: 1px solid #000000;
+    margin-right: 20px;
+    font-size: 12px;
+    width: 210px;
+}
+.imgTrash {
+    color: white;
+    margin-bottom: 4px;
+}
+
+#sectionPlans {
+    overflow-x: auto;
+    height: auto;
+    margin-top: 20px;
+    padding-bottom: 10px;
+}
+
+#tablePlans {
+    white-space: nowrap;
+    text-align: center;
+    color: #28285A;
+    font-size: 12px;
+}
+
+    #tablePlans thead {
+        background-color: #4C6CB3;
+        color: white;
+        text-align: center;
+        line-height: 30px;
+    }
+
+        #tablePlans th {
+            padding: 5px;
+        }
+
+    #tablePlans td {
+        border-width: 1px 0;
+        border-color: #E0E0E0;
+        border-style: solid;
+        height: 48px;
+        padding: 10px;
+    }
+
+    #tablePlans thead tr:nth-child(2) {
+        line-height: 45px;
+        background-color: #FFFFFF;
+    }
+
+    #tablePlans thead .firstChild {
+        border-radius: 8px 0 0 0px;
+    }
+
+    #tablePlans thead th:last-child {
+        border-radius: 0 8px 0px 0;
+    }
+
+    #tablePlans tbody {
+        text-align: center;
+    }
+
+        #tablePlans tbody tr {
+            border: 1px solid #E0E0E0;
+        }
+
+    #tablePlans #cellEdit{
+        padding-left: 12px
+    }
+
+    #tablePlans input {
+        border-radius: 8px;
+        border: 1px solid #28285A;
+        height: 30px;
+        text-align: center;
+    }
+
+    #tablePlans #myInput{
+        width: 130px;
+    }
+
+    #tablePlans #myInput2 {
+        width: 100px;
+    }
+
+    #tablePlans #myInput3 {
+        width: 85px;
+    }
+
+    #tablePlans #myInput4 {
+        width: 110px;
+        text-transform: uppercase;
+    }
+
+    #tablePlans #myInput7 {
+        width: 85px;
+    }
+
+    #tablePlans select {
+        border-radius: 8px;
+        border: 1px solid #28285A;
+        height: 30px;
+        text-align: center;
+    }
+
+#btCancelEffectPlan {
+    border-radius: 05px;
+    border: 2px solid #28285A;
+    font-size: 12px;    
+    margin: 0px 0px 0px 10px;
+}
+
+.icon {
+    padding-left: 0px;
+    background: url("https://static.thenounproject.com/png/101791-200.png") no-repeat left;
+    background-size: 20px;
+}
+
+.icon2 {
+    padding-left: 0px;
+    background: url("https://static.thenounproject.com/png/101791-200.png") no-repeat left;
+    background-size: 20px;
+}
+
+.icon3 {
+    padding-left: 0px;
+    background: url("https://static.thenounproject.com/png/101791-200.png") no-repeat left;
+    background-size: 20px;
+}
+
+.icon4 {
+    padding-left: 0px;
+    background: url("https://static.thenounproject.com/png/101791-200.png") no-repeat left;
+    background-size: 20px;
+}
+
+.icon5 {
+    padding-left: 0px;
+    background: url("https://static.thenounproject.com/png/101791-200.png") no-repeat left;
+    background-size: 20px;
+}
+
+.delete_Button {
+    width: 249px;
+    height: 40px;
+    background-color: white;
+    color: #28285A;
+    border-radius: 10px
+}

@@ -1,0 +1,194 @@
+﻿@model SGOO3.Models.Entities.Produto
+@{
+    ViewData["Title"] = "Tela Home";
+    Layout = "~/Views/Shared/_LayoutDashboardHome.cshtml";
+}
+<link src="~/js/jquery.min.js" rel="stylesheet" />
+<script src="~/js/jquery.min.js"></script>
+<script src="~/js/responsivevoice.js"></script>
+<div class="Home-container">
+    <div class="top-bar">
+        <button class="back-button">
+            <img src="~/img/lynxsgoo/back_icon.svg" alt="Ícone" class="botao-imagem">
+             Voltar
+        </button>
+        <button class="settings-button">
+            <img src="~/img/lynxsgoo/adjustment_icon.svg" alt="Ícone" class="botao-imagem">
+            Ajustes
+        </button>
+    </div>
+    <div class="header">
+        <div class="header-h1">
+            <h1 class="head-icon">Itens</h1>
+            <h1 class="head-icon">Totais</h1>
+        </div>
+        <div class="header-img">
+            <img src="~/img/lynxsgoo/refrigerator_icon.svg" alt="Ícone" class="botao-imagem-geladeira">
+        </div>
+    </div>
+    <div class="item-list">
+        @{
+            int counter = 0;
+        }
+        @foreach (var produto in Model.Produtos)
+        {
+            var pesoFormatado = produto.PesoAtual.ToString("F0");
+            var cor = "";
+
+            // Definir a cor com base nas condições do peso
+            if (produto.PesoAtual == 0)
+            {
+                cor = "#DFAAAA"; // Vermelho para peso igual a zero
+            }
+            else if (produto.PesoAtual < produto.QuantidadeMinima)
+            {
+                cor = "#FFF0B6"; // Amarelo para peso menor que a quantidade mínima
+            }
+            else
+            {
+                cor = "#BEFFE0"; // Verde para peso maior que a quantidade mínima
+            }
+
+            <div class="item produto-item" style="background-color: @cor;" data-produto-id="@produto.id">
+                @produto.Nome - <span class="peso-atual">@pesoFormatado gramas</span>
+            </div>
+
+            counter++;
+        }
+    </div>
+
+
+    <button class="read-list-button" id="readListButton">
+        <img src="~/img/lynxsgoo/speaker_icon.svg" alt="Ícone" class="botao-imagem">
+        <span class="container-span">Ler Lista</span>
+    </button>
+
+    <button class="add-product-button">
+        <img src="~/img/lynxsgoo/cycle_icon.svg" alt="Ícone" class="botao-imagem">
+        <span class="container-span">Cadastro de Produto</span>
+    </button>
+    <button class="bluetooth-info">
+        <img src="~/img/lynxsgoo/bluetooth_icon.svg" alt="Ícone" class="botao-imagem-bluetooth ">
+        <div class="bluetooth-span">
+            <span class="container-span-bluetooth" id="connectedDeviceName"></span>
+        </div>
+    </button>
+</div>
+<script>
+    $(document).ready(function () {
+        var selectedDeviceName = localStorage.getItem('selectedDeviceName');
+        if (selectedDeviceName) {
+            $("#connectedDeviceName").text("Conectado " + selectedDeviceName);
+        }
+        $(".back-button").click(function () {
+            window.location.href = '@Url.Action("Index", "ArmazenamentoInteligente")';
+        });
+        $(".settings-button").click(function () {
+            window.location.href = '@Url.Action("Configuracao", "ArmazenamentoInteligente")';
+        });
+        $(".add-product-button").click(function () {
+            window.location.href = '@Url.Action("Cadastro", "ArmazenamentoInteligente")';
+        });
+        $("#readListButton").click(function () {
+            $.ajax({
+                url: '@Url.Action("CheckAudioConfig", "ArmazenamentoInteligente")',
+                type: 'GET',
+                success: function (data) {
+                    if (data.audioEnabled) {
+                        readProductList();
+                    } else {
+                        // Exibir modal de aviso de áudio desabilitado
+                        openModalErro("O áudio está desabilitado. Ative nas configurações para ouvir a lista.");
+                    }
+                },
+                error: function (error) {
+                    // Lide com o erro se necessário
+                    console.log("erro");
+                }
+            }); 
+        });
+        sendArduinoData();
+        receivedArduinoData();
+        setInterval(atualizarDados, 1000);
+    });
+    function atualizarDados() {
+        $.ajax({
+            url: '@Url.Action("UpdateData", "ArmazenamentoInteligente")',
+            type: 'GET',
+            success: function (data) {
+                // Atualiza os dados na interface com base na resposta do servidor
+                if (data.success) {
+                    // Itera sobre a lista de produtos
+                    data.produtos.forEach(function (produto) {
+                        // Encontra o elemento da lista com base no produtoId
+                        var produtoElement = $(".produto-item[data-produto-id='" + produto.produtoId + "']");
+
+                        // Atualiza a cor conforme necessário
+                        produtoElement.css("background-color", produto.cor);
+
+                        // Atualiza o peso atual
+                        produtoElement.find(".peso-atual").text(produto.novoPeso + " gramas");
+                    });
+                }
+            },
+            error: function (error) {
+                // Lide com o erro se necessário
+                console.log("erro");
+            }
+        });
+    }
+
+
+    function readProductList() {
+        var productList = [];
+        $(".item-list .item").each(function () {
+            productList.push($(this).text());
+        });
+
+        var textToRead = productList.join(", "); // Concatenate product names with commas
+
+        var utterance = new SpeechSynthesisUtterance();
+        utterance.text = textToRead;
+        utterance.lang = "pt-BR"; // Brazilian Portuguese
+
+        window.speechSynthesis.speak(utterance);
+    }
+    function sendArduinoData() {
+
+        var selectedDeviceId = localStorage.getItem('selectedDeviceId');
+
+        $.ajax({
+            url: '@Url.Action("SendDataToArduino", "ArmazenamentoInteligente")',
+            type: 'GET',
+            data: { deviceId: selectedDeviceId }, // Passa o ID do produto para a Controller
+            success: function (data) {
+                console.log(data);
+            },
+            error: function (error) {
+                // Lide com o erro se necessário
+                console.log("erro");
+            }
+        });
+    }
+    function receivedArduinoData() {
+
+        var selectedDeviceId = localStorage.getItem('selectedDeviceId');
+
+        $.ajax({
+            url: '@Url.Action("ReceivedArduinoData", "ArmazenamentoInteligente")',
+            type: 'GET',
+            data: { deviceId: selectedDeviceId }, // Passa o ID do produto para a Controller
+            success: function (data) {
+                var produtoElement = $(".produto-item[data-produto-id='" + data.produtoName + "']");
+                produtoElement.css("background-color", data.cor); // Atualiza a cor conforme necessário
+                produtoElement.find(".peso-atual").text(data.novoPeso + " gramas");
+                setTimeout(receivedArduinoData, 1000);
+            },
+            error: function (error) {
+                // Lide com o erro se necessário
+                console.log("erro");
+            }
+        });
+    }
+
+</script>

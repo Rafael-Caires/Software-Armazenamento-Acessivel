@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Root>
+  <PackageReference Name="ScreenStreaming" Version="1.0.0" />
+  <PackageReference Name="Studio3D" Version="3.2.0" />
+  <PackageReference Name="Platform" Version="3.4.0">
+    <SystemSetting Key="Version" Value="3.5" />
+  </PackageReference>
+  <PackageReference Name="MoreLinq" Version="3.0.0" />
+  <PackageReference Name="System.IO.Compression" Version="5.0.0" />
+  <PackageReference Name="Lynx.Fw" Version="3.1.0" />
+  <PackageReference Name="Objects" Version="5.0.0" />
+  <PackageReference Name="System.Reactive" Version="5.0.0" />
+  <PackageReference Name="MessageHub" Version="4.1.0" />
+  <PackageReference Name="Data" Version="4.0.1" />
+  <PackageReference Name="NCalc" Version="2.0.0" />
+  <PackageReference Name="SharpDX" Version="5.0.0" />
+  <PackageReference Name="SharpDX.Mathematics" Version="5.0.0" />
+  <PackageReference Name="Mathematics" Version="3.1.1" />
+  <PackageReference Name="Accord" Version="4.0.0" />
+  <PackageReference Name="Accord.Math" Version="4.0.0" />
+</Root>

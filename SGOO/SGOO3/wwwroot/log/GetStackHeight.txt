@@ -1,0 +1,48 @@
+-----------------------------------------------------------------------------
+Date : 29/11/2022 10:17:03
+
+System.NullReferenceException
+Message : Object reference not set to an instance of an object.
+StackTrace :    at SGOO3.Controllers.OperacaoController.GetStackHeight(Int32 stackId, Int32 machineId) in C:\Users\rafael.caires\Documents\lynx-rtp\SGOO\SGOO3\Controllers\OperacaoController.cs:line 921
+-----------------------------------------------------------------------------
+Date : 29/11/2022 11:38:57
+
+System.NullReferenceException
+Message : Object reference not set to an instance of an object.
+StackTrace :    at SGOO3.Controllers.OperacaoController.GetStackHeight(Int32 stackId, Int32 machineId) in C:\Users\rafael.caires\Documents\lynx-rtp\SGOO\SGOO3\Controllers\OperacaoController.cs:line 921
+-----------------------------------------------------------------------------
+Date : 29/11/2022 11:54:31
+
+System.NullReferenceException
+Message : Object reference not set to an instance of an object.
+StackTrace :    at SGOO3.Controllers.OperacaoController.GetStackHeight(Int32 stackId, Int32 machineId) in C:\Users\rafael.caires\Documents\lynx-rtp\SGOO\SGOO3\Controllers\OperacaoController.cs:line 921
+-----------------------------------------------------------------------------
+Date : 29/11/2022 11:56:33
+
+System.NullReferenceException
+Message : Object reference not set to an instance of an object.
+StackTrace :    at SGOO3.Controllers.OperacaoController.GetStackHeight(Int32 stackId, Int32 machineId) in C:\Users\rafael.caires\Documents\lynx-rtp\SGOO\SGOO3\Controllers\OperacaoController.cs:line 921
+-----------------------------------------------------------------------------
+Date : 29/11/2022 12:01:11
+
+System.NullReferenceException
+Message : Object reference not set to an instance of an object.
+StackTrace :    at SGOO3.Controllers.OperacaoController.GetStackHeight(Int32 stackId, Int32 machineId) in C:\Users\rafael.caires\Documents\lynx-rtp\SGOO\SGOO3\Controllers\OperacaoController.cs:line 921
+-----------------------------------------------------------------------------
+Date : 29/11/2022 12:42:22
+
+System.NullReferenceException
+Message : Object reference not set to an instance of an object.
+StackTrace :    at SGOO3.Controllers.OperacaoController.GetStackHeight(Int32 stackId, Int32 machineId) in C:\Users\rafael.caires\Documents\lynx-rtp\SGOO\SGOO3\Controllers\OperacaoController.cs:line 921
+-----------------------------------------------------------------------------
+Date : 30/11/2022 15:57:06
+
+System.NullReferenceException
+Message : Object reference not set to an instance of an object.
+StackTrace :    at SGOO3.Controllers.OperacaoController.GetStackHeight(Int32 stackId, Int32 machineId) in C:\Users\rafael.caires\Documents\lynx-rtp\SGOO\SGOO3\Controllers\OperacaoController.cs:line 921
+-----------------------------------------------------------------------------
+Date : 01/12/2022 09:20:59
+
+System.NullReferenceException
+Message : Object reference not set to an instance of an object.
+StackTrace :    at SGOO3.Controllers.OperacaoController.GetStackHeight(Int32 stackId, Int32 machineId)

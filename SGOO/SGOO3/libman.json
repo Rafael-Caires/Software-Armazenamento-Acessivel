@@ -1,0 +1,42 @@
+{
+  "version": "1.0",
+  "defaultProvider": "cdnjs",
+  "libraries": [
+    {
+      "library": "datatables@1.10.0",
+      "destination": "wwwroot/lib/datatables/"
+    },
+    {
+      "library": "font-awesome@5.15.1",
+      "destination": "wwwroot/lib/font-awesome/"
+    },
+    {
+      "provider": "unpkg",
+      "library": "boostrap@latest",
+      "destination": "wwwroot/lib/boostrap/"
+    },
+    {
+      "library": "jquery@3.5.1",
+      "destination": "wwwroot/lib/jquery/"
+    },
+    {
+      "provider": "unpkg",
+      "library": "bootstrap@4.5.3",
+      "destination": "wwwroot/lib/bootstrap/"
+    },
+    {
+      "library": "mdbootstrap@4.1.1",
+      "destination": "wwwroot/lib/mdbootstrap/"
+    },
+    {
+      "provider": "unpkg",
+      "library": "@microsoft/signalr@5.0.5",
+      "destination": "wwwroot/microsoft/signalr/"
+    },
+    {
+      "provider": "unpkg",
+      "library": "nouislider@15.6.0",
+      "destination": "wwwroot/lib/nouislider/"
+    }
+  ]
+}

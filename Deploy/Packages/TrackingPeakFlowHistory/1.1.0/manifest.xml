@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PackageManifest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Name>TrackingPeakFlowHistory</Name>
+  <PlatformVersion>3.5</PlatformVersion>
+  <Version>1.1.0</Version>
+  <Dependencies>
+    <Package>
+      <Name>Data</Name>
+      <Version>4.0</Version>
+    </Package>
+    <Package>
+      <Name>Lynx.Fw</Name>
+      <Version>3.1</Version>
+    </Package>
+    <Package>
+      <Name>Mining</Name>
+      <Version>3.1</Version>
+    </Package>
+    <Package>
+      <Name>Objects</Name>
+      <Version>5.0</Version>
+    </Package>
+    <Package>
+      <Name>System.Reactive</Name>
+      <Version>5.0</Version>
+    </Package>
+    <Package>
+      <Name>Tracking</Name>
+      <Version>3.3</Version>
+    </Package>
+    <Package>
+      <Name>Tracking.Scale</Name>
+      <Version>3.0</Version>
+    </Package>
+    <Package>
+      <Name>Tracking.Utils</Name>
+      <Version>1.1</Version>
+    </Package>
+  </Dependencies>
+</PackageManifest>

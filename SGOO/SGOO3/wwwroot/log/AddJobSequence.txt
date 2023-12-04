@@ -1,0 +1,184 @@
+-----------------------------------------------------------------------------
+Date : 14/09/2022 09:19:58
+
+System.InvalidOperationException
+Message : Enumerator failed to MoveNextAsync.
+StackTrace :    at Microsoft.EntityFrameworkCore.Query.ShapedQueryCompilingExpressionVisitor.SingleAsync[TSource](IAsyncEnumerable`1 asyncEnumerable, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.ShapedQueryCompilingExpressionVisitor.SingleAsync[TSource](IAsyncEnumerable`1 asyncEnumerable, CancellationToken cancellationToken)
+   at SGOO3.Areas.QPS.Controllers.ShipmentSequenceExecutionQualitiesController.AddJobSequence(String json) in C:\Users\rafael.caires\Documents\lynx-rtp\SGOO\SGOO3\Areas\QPS\Controllers\ShipmentSequenceExecutionQualitiesController.cs:line 1813
+-----------------------------------------------------------------------------
+Date : 14/09/2022 09:20:03
+
+System.InvalidOperationException
+Message : Enumerator failed to MoveNextAsync.
+StackTrace :    at Microsoft.EntityFrameworkCore.Query.ShapedQueryCompilingExpressionVisitor.SingleAsync[TSource](IAsyncEnumerable`1 asyncEnumerable, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.ShapedQueryCompilingExpressionVisitor.SingleAsync[TSource](IAsyncEnumerable`1 asyncEnumerable, CancellationToken cancellationToken)
+   at SGOO3.Areas.QPS.Controllers.ShipmentSequenceExecutionQualitiesController.AddJobSequence(String json) in C:\Users\rafael.caires\Documents\lynx-rtp\SGOO\SGOO3\Areas\QPS\Controllers\ShipmentSequenceExecutionQualitiesController.cs:line 1813
+-----------------------------------------------------------------------------
+Date : 14/09/2022 09:26:18
+
+System.InvalidOperationException
+Message : Enumerator failed to MoveNextAsync.
+StackTrace :    at Microsoft.EntityFrameworkCore.Query.ShapedQueryCompilingExpressionVisitor.SingleAsync[TSource](IAsyncEnumerable`1 asyncEnumerable, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.ShapedQueryCompilingExpressionVisitor.SingleAsync[TSource](IAsyncEnumerable`1 asyncEnumerable, CancellationToken cancellationToken)
+   at SGOO3.Areas.QPS.Controllers.ShipmentSequenceExecutionQualitiesController.AddJobSequence(String json) in C:\Users\rafael.caires\Documents\lynx-rtp\SGOO\SGOO3\Areas\QPS\Controllers\ShipmentSequenceExecutionQualitiesController.cs:line 1813
+-----------------------------------------------------------------------------
+Date : 14/09/2022 09:55:36
+
+System.InvalidOperationException
+Message : Enumerator failed to MoveNextAsync.
+StackTrace :    at Microsoft.EntityFrameworkCore.Query.ShapedQueryCompilingExpressionVisitor.SingleAsync[TSource](IAsyncEnumerable`1 asyncEnumerable, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.ShapedQueryCompilingExpressionVisitor.SingleAsync[TSource](IAsyncEnumerable`1 asyncEnumerable, CancellationToken cancellationToken)
+   at SGOO3.Areas.QPS.Controllers.ShipmentSequenceExecutionQualitiesController.AddJobSequence(String json) in C:\Users\rafael.caires\Documents\lynx-rtp\SGOO\SGOO3\Areas\QPS\Controllers\ShipmentSequenceExecutionQualitiesController.cs:line 1813
+-----------------------------------------------------------------------------
+Date : 14/09/2022 10:00:16
+
+System.InvalidOperationException
+Message : Enumerator failed to MoveNextAsync.
+StackTrace :    at Microsoft.EntityFrameworkCore.Query.ShapedQueryCompilingExpressionVisitor.SingleAsync[TSource](IAsyncEnumerable`1 asyncEnumerable, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.ShapedQueryCompilingExpressionVisitor.SingleAsync[TSource](IAsyncEnumerable`1 asyncEnumerable, CancellationToken cancellationToken)
+   at SGOO3.Areas.QPS.Controllers.ShipmentSequenceExecutionQualitiesController.AddJobSequence(String json) in C:\Users\rafael.caires\Documents\lynx-rtp\SGOO\SGOO3\Areas\QPS\Controllers\ShipmentSequenceExecutionQualitiesController.cs:line 1813
+-----------------------------------------------------------------------------
+Date : 14/09/2022 10:04:11
+
+System.InvalidOperationException
+Message : Enumerator failed to MoveNextAsync.
+StackTrace :    at Microsoft.EntityFrameworkCore.Query.ShapedQueryCompilingExpressionVisitor.SingleAsync[TSource](IAsyncEnumerable`1 asyncEnumerable, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.ShapedQueryCompilingExpressionVisitor.SingleAsync[TSource](IAsyncEnumerable`1 asyncEnumerable, CancellationToken cancellationToken)
+   at SGOO3.Areas.QPS.Controllers.ShipmentSequenceExecutionQualitiesController.AddJobSequence(String json) in C:\Users\rafael.caires\Documents\lynx-rtp\SGOO\SGOO3\Areas\QPS\Controllers\ShipmentSequenceExecutionQualitiesController.cs:line 1813
+-----------------------------------------------------------------------------
+Date : 14/09/2022 10:04:12
+
+System.InvalidOperationException
+Message : Enumerator failed to MoveNextAsync.
+StackTrace :    at Microsoft.EntityFrameworkCore.Query.ShapedQueryCompilingExpressionVisitor.SingleAsync[TSource](IAsyncEnumerable`1 asyncEnumerable, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.ShapedQueryCompilingExpressionVisitor.SingleAsync[TSource](IAsyncEnumerable`1 asyncEnumerable, CancellationToken cancellationToken)
+   at SGOO3.Areas.QPS.Controllers.ShipmentSequenceExecutionQualitiesController.AddJobSequence(String json) in C:\Users\rafael.caires\Documents\lynx-rtp\SGOO\SGOO3\Areas\QPS\Controllers\ShipmentSequenceExecutionQualitiesController.cs:line 1813
+-----------------------------------------------------------------------------
+Date : 14/09/2022 10:18:19
+
+System.InvalidOperationException
+Message : Enumerator failed to MoveNextAsync.
+StackTrace :    at Microsoft.EntityFrameworkCore.Query.ShapedQueryCompilingExpressionVisitor.SingleAsync[TSource](IAsyncEnumerable`1 asyncEnumerable, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.ShapedQueryCompilingExpressionVisitor.SingleAsync[TSource](IAsyncEnumerable`1 asyncEnumerable, CancellationToken cancellationToken)
+   at SGOO3.Areas.QPS.Controllers.ShipmentSequenceExecutionQualitiesController.AddJobSequence(String json) in C:\Users\rafael.caires\Documents\lynx-rtp\SGOO\SGOO3\Areas\QPS\Controllers\ShipmentSequenceExecutionQualitiesController.cs:line 1813
+-----------------------------------------------------------------------------
+Date : 14/09/2022 10:23:00
+
+System.InvalidOperationException
+Message : Enumerator failed to MoveNextAsync.
+StackTrace :    at Microsoft.EntityFrameworkCore.Query.ShapedQueryCompilingExpressionVisitor.SingleAsync[TSource](IAsyncEnumerable`1 asyncEnumerable, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.ShapedQueryCompilingExpressionVisitor.SingleAsync[TSource](IAsyncEnumerable`1 asyncEnumerable, CancellationToken cancellationToken)
+   at SGOO3.Areas.QPS.Controllers.ShipmentSequenceExecutionQualitiesController.AddJobSequence(String json) in C:\Users\rafael.caires\Documents\lynx-rtp\SGOO\SGOO3\Areas\QPS\Controllers\ShipmentSequenceExecutionQualitiesController.cs:line 1813
+-----------------------------------------------------------------------------
+Date : 14/09/2022 16:14:50
+
+System.InvalidOperationException
+Message : Sequence contains no elements
+StackTrace :    at System.Linq.ThrowHelper.ThrowNoElementsException()
+   at System.Linq.Enumerable.Last[TSource](IEnumerable`1 source)
+   at SGOO3.Areas.QPS.Controllers.ShipmentSequenceExecutionQualitiesController.AddJobSequence(String json) in C:\Users\rafael.caires\Documents\lynx-rtp\SGOO\SGOO3\Areas\QPS\Controllers\ShipmentSequenceExecutionQualitiesController.cs:line 1812
+-----------------------------------------------------------------------------
+Date : 14/09/2022 16:15:01
+
+System.InvalidOperationException
+Message : Sequence contains no elements
+StackTrace :    at System.Linq.ThrowHelper.ThrowNoElementsException()
+   at System.Linq.Enumerable.Last[TSource](IEnumerable`1 source)
+   at SGOO3.Areas.QPS.Controllers.ShipmentSequenceExecutionQualitiesController.AddJobSequence(String json) in C:\Users\rafael.caires\Documents\lynx-rtp\SGOO\SGOO3\Areas\QPS\Controllers\ShipmentSequenceExecutionQualitiesController.cs:line 1812
+-----------------------------------------------------------------------------
+Date : 14/09/2022 16:24:02
+
+System.InvalidOperationException
+Message : Sequence contains no elements
+StackTrace :    at System.Linq.ThrowHelper.ThrowNoElementsException()
+   at System.Linq.Enumerable.Last[TSource](IEnumerable`1 source)
+   at SGOO3.Areas.QPS.Controllers.ShipmentSequenceExecutionQualitiesController.AddJobSequence(String json) in C:\Users\rafael.caires\Documents\lynx-rtp\SGOO\SGOO3\Areas\QPS\Controllers\ShipmentSequenceExecutionQualitiesController.cs:line 1812
+-----------------------------------------------------------------------------
+Date : 14/09/2022 16:24:13
+
+System.InvalidOperationException
+Message : Sequence contains no elements
+StackTrace :    at System.Linq.ThrowHelper.ThrowNoElementsException()
+   at System.Linq.Enumerable.Last[TSource](IEnumerable`1 source)
+   at SGOO3.Areas.QPS.Controllers.ShipmentSequenceExecutionQualitiesController.AddJobSequence(String json) in C:\Users\rafael.caires\Documents\lynx-rtp\SGOO\SGOO3\Areas\QPS\Controllers\ShipmentSequenceExecutionQualitiesController.cs:line 1812
+-----------------------------------------------------------------------------
+Date : 14/09/2022 16:25:11
+
+System.InvalidOperationException
+Message : Sequence contains no elements
+StackTrace :    at System.Linq.ThrowHelper.ThrowNoElementsException()
+   at System.Linq.Enumerable.Last[TSource](IEnumerable`1 source)
+   at SGOO3.Areas.QPS.Controllers.ShipmentSequenceExecutionQualitiesController.AddJobSequence(String json) in C:\Users\rafael.caires\Documents\lynx-rtp\SGOO\SGOO3\Areas\QPS\Controllers\ShipmentSequenceExecutionQualitiesController.cs:line 1812
+-----------------------------------------------------------------------------
+Date : 14/09/2022 16:25:52
+
+System.InvalidOperationException
+Message : Sequence contains no elements
+StackTrace :    at System.Linq.ThrowHelper.ThrowNoElementsException()
+   at System.Linq.Enumerable.Last[TSource](IEnumerable`1 source)
+   at SGOO3.Areas.QPS.Controllers.ShipmentSequenceExecutionQualitiesController.AddJobSequence(String json) in C:\Users\rafael.caires\Documents\lynx-rtp\SGOO\SGOO3\Areas\QPS\Controllers\ShipmentSequenceExecutionQualitiesController.cs:line 1812
+-----------------------------------------------------------------------------
+Date : 14/09/2022 16:32:58
+
+System.InvalidOperationException
+Message : Sequence contains no elements
+StackTrace :    at System.Linq.ThrowHelper.ThrowNoElementsException()
+   at System.Linq.Enumerable.Last[TSource](IEnumerable`1 source)
+   at SGOO3.Areas.QPS.Controllers.ShipmentSequenceExecutionQualitiesController.AddJobSequence(String json) in C:\Users\rafael.caires\Documents\lynx-rtp\SGOO\SGOO3\Areas\QPS\Controllers\ShipmentSequenceExecutionQualitiesController.cs:line 1812
+-----------------------------------------------------------------------------
+Date : 14/09/2022 16:45:37
+
+System.InvalidOperationException
+Message : Sequence contains no elements
+StackTrace :    at System.Linq.ThrowHelper.ThrowNoElementsException()
+   at System.Linq.Enumerable.Last[TSource](IEnumerable`1 source)
+   at SGOO3.Areas.QPS.Controllers.ShipmentSequenceExecutionQualitiesController.AddJobSequence(String json) in C:\Users\rafael.caires\Documents\lynx-rtp\SGOO\SGOO3\Areas\QPS\Controllers\ShipmentSequenceExecutionQualitiesController.cs:line 1812
+-----------------------------------------------------------------------------
+Date : 14/09/2022 16:45:38
+
+System.InvalidOperationException
+Message : Sequence contains no elements
+StackTrace :    at System.Linq.ThrowHelper.ThrowNoElementsException()
+   at System.Linq.Enumerable.Last[TSource](IEnumerable`1 source)
+   at SGOO3.Areas.QPS.Controllers.ShipmentSequenceExecutionQualitiesController.AddJobSequence(String json) in C:\Users\rafael.caires\Documents\lynx-rtp\SGOO\SGOO3\Areas\QPS\Controllers\ShipmentSequenceExecutionQualitiesController.cs:line 1812
+-----------------------------------------------------------------------------
+Date : 14/09/2022 16:45:39
+
+System.InvalidOperationException
+Message : Sequence contains no elements
+StackTrace :    at System.Linq.ThrowHelper.ThrowNoElementsException()
+   at System.Linq.Enumerable.Last[TSource](IEnumerable`1 source)
+   at SGOO3.Areas.QPS.Controllers.ShipmentSequenceExecutionQualitiesController.AddJobSequence(String json) in C:\Users\rafael.caires\Documents\lynx-rtp\SGOO\SGOO3\Areas\QPS\Controllers\ShipmentSequenceExecutionQualitiesController.cs:line 1812
+-----------------------------------------------------------------------------
+Date : 14/09/2022 16:45:50
+
+System.InvalidOperationException
+Message : Sequence contains no elements
+StackTrace :    at System.Linq.ThrowHelper.ThrowNoElementsException()
+   at System.Linq.Enumerable.Last[TSource](IEnumerable`1 source)
+   at SGOO3.Areas.QPS.Controllers.ShipmentSequenceExecutionQualitiesController.AddJobSequence(String json) in C:\Users\rafael.caires\Documents\lynx-rtp\SGOO\SGOO3\Areas\QPS\Controllers\ShipmentSequenceExecutionQualitiesController.cs:line 1812
+-----------------------------------------------------------------------------
+Date : 15/09/2022 08:47:12
+
+System.InvalidOperationException
+Message : Sequence contains no elements
+StackTrace :    at System.Linq.ThrowHelper.ThrowNoElementsException()
+   at System.Linq.Enumerable.Last[TSource](IEnumerable`1 source)
+   at SGOO3.Areas.QPS.Controllers.ShipmentSequenceExecutionQualitiesController.AddJobSequence(String json) in C:\Users\rafael.caires\Documents\lynx-rtp\SGOO\SGOO3\Areas\QPS\Controllers\ShipmentSequenceExecutionQualitiesController.cs:line 1831
+-----------------------------------------------------------------------------
+Date : 15/09/2022 08:48:58
+
+System.InvalidOperationException
+Message : Sequence contains no elements
+StackTrace :    at System.Linq.ThrowHelper.ThrowNoElementsException()
+   at System.Linq.Enumerable.Last[TSource](IEnumerable`1 source)
+   at SGOO3.Areas.QPS.Controllers.ShipmentSequenceExecutionQualitiesController.AddJobSequence(String json) in C:\Users\rafael.caires\Documents\lynx-rtp\SGOO\SGOO3\Areas\QPS\Controllers\ShipmentSequenceExecutionQualitiesController.cs:line 1831
+-----------------------------------------------------------------------------
+Date : 15/09/2022 08:49:12
+
+System.InvalidOperationException
+Message : Sequence contains no elements
+StackTrace :    at System.Linq.ThrowHelper.ThrowNoElementsException()
+   at System.Linq.Enumerable.Last[TSource](IEnumerable`1 source)
+   at SGOO3.Areas.QPS.Controllers.ShipmentSequenceExecutionQualitiesController.AddJobSequence(String json) in C:\Users\rafael.caires\Documents\lynx-rtp\SGOO\SGOO3\Areas\QPS\Controllers\ShipmentSequenceExecutionQualitiesController.cs:line 1831

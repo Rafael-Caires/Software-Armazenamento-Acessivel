@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PackageManifest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Name>MessageHub</Name>
+  <PlatformVersion>3.5</PlatformVersion>
+  <Version>4.1.0</Version>
+  <Dependencies>
+    <Package>
+      <Name>Lynx.Fw</Name>
+      <Version>3.1</Version>
+    </Package>
+  </Dependencies>
+</PackageManifest>

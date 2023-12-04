@@ -1,0 +1,221 @@
+﻿#container-sequence-execution {
+    overflow-x: auto;
+    height: auto;
+    margin-top: 20px;
+    padding-bottom: 10px;
+}
+
+#expected_quality_title button {
+    border: none;
+    background: #FFFFFF;
+    color: #28285A;
+    border-radius: 5px;
+    font-size: 12px;
+    height: 35px;
+    line-height: 30px;
+    text-align: center;
+    width: 175px;
+}
+
+#expected_quality_title .selected {
+    border: none;
+    background: #4C6CB3;
+    color: #FFFFFF;
+    border-radius: 5px 5px 0px 0px;
+    height: 41px;
+}
+
+#result-container {
+    margin-right: -10px;
+    border: 1.11871px solid #28285A;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 24px;
+    padding: 10px;
+    height: 470px;
+}
+
+#expected_quality {
+    height: 450px;
+    text-align: center;
+    overflow-y: auto;
+}
+
+#quality-table {
+    margin-top: 0px;
+    font-size: 12px;
+    color: #28285A;
+    font-size: 12px;
+    overflow-x: auto;
+    white-space: nowrap;
+}
+
+    #quality-table tr:first-child th {
+        border-top-color: #4C6CB3;
+    }
+
+    #quality-table tr {
+        border-bottom: 1px solid #E0E0E0;
+    }
+
+    #quality-table img {
+        margin-bottom: 6px;
+        width: 16px;
+    }
+
+    #quality-table span {
+        font-weight: normal;
+    }
+
+    #expected_quality_title {
+        color: #28285A;
+        font-size: 16px;
+        font-weight: bold;
+        height: 45px;
+        line-height: 45px;
+    }
+
+#composition-table {
+    margin-top: 0px;
+    font-size: 12px;
+    color: #28285A;
+    font-size: 12px;
+    overflow-x: auto;
+    white-space: nowrap;
+}
+
+    #composition-table tr {
+        border-bottom: 1px solid #E0E0E0;
+    }
+
+        #composition-table tr:first-child th {
+            border-top-color: #4C6CB3;
+        }
+
+    #composition-table img {
+        margin-bottom: 6px;
+        width: 16px;
+    }
+
+    #composition-table span {
+        font-weight: normal;
+    }
+
+.buttons-container {
+    margin-top: 15px;
+    margin-bottom: -20px;
+    height: 30px;
+    display: table;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+    padding: 0px;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    width: 120px;
+    margin: 10px;
+}
+
+    .dropdown-content a {
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+    }
+
+        .dropdown-content a:hover {
+            background-color: #f1f1f1
+        }
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropbtn {
+    background-color: #28285A;
+}
+
+fieldset {
+    text-align: center;
+    border: solid 1px #28285A;
+    margin-bottom: 0px;
+    border-radius: 5px;
+    padding: 0px;
+    font-size: 10px;
+    height: 40px;
+}
+
+legend {
+    font-size: 10px;
+    margin-top: -10px;
+    padding-left: 10px;
+    text-align: left;
+    margin-left: 10px;
+    color: #28285A;
+}
+
+.loteId {
+    margin-top: -10px;
+    border: none !important;
+    height: 20px !important;
+    display: block;
+    background-color: transparent;
+    resize: none;
+    outline: none;
+    margin-left: 05%;
+    width: 90%;
+}
+
+.wagondumper {
+    margin-top: -10px;
+    height: 20px !important;
+    display: block;
+    border: none;
+    background-color: transparent;
+    resize: none;
+    outline: none;
+    text-align: center;
+    word-wrap: normal;
+    margin-left: 05%;
+    width: 90%;
+}
+
+.astNotListed {
+    color: red;
+    font-weight: bold;
+}
+
+[data-tooltip] {
+    position: relative;
+    font-weight: bold;
+}
+
+    [data-tooltip]:after {
+        display: none;
+        position: absolute;
+        top: -55px;
+        padding: 5px;
+        border: solid #4C6CB3 1px;
+        border-radius: 3px;
+        /*left: calc(100% + 12px);*/
+        left: calc(-60%);
+        content: attr(data-tooltip);
+        white-space: nowrap;
+        background-color: #FFFFFF /*#0095ff*/;
+        color: #4C6CB3;
+        z-index: 1;
+        white-space: pre-line;
+        width: 105px;
+    }
+
+    [data-tooltip]:hover:after {
+        display: block;
+    }

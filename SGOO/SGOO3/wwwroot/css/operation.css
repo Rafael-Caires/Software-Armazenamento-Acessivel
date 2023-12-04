@@ -1,0 +1,52 @@
+﻿.circle-icon {
+    background: #e8e8e8;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 100px;
+    vertical-align: middle;
+    padding: 2px;
+}
+
+.progress-bar.create {
+    height: 5px;
+    padding: 5px;
+    width: 50px;
+    background-color: #FFD700;
+}
+
+.progress-bar.execution {
+    height: 5px;
+    padding: 5px;
+    width: 50px;
+    background-color: #3d8a3d;
+}
+
+.progress-bar.program {
+    height: 5px;
+    padding: 5px;
+    width: 50px;
+    background-color: #5151f5;
+}
+
+.progress-bar.paused {
+    height: 5px;
+    padding: 5px;
+    width: 50px;
+    background-color: #ff8c00;
+}
+
+.progress-bar.finally {
+    height: 5px;
+    padding: 5px;
+    width: 50px;
+    background-color: #ff0000;
+}
+
+.progress-bar.delete {
+    height: 5px;
+    padding: 5px;
+    width: 50px;
+    background-color: #666666;
+}

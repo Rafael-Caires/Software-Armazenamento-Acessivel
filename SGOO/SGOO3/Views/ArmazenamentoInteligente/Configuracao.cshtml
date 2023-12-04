@@ -1,0 +1,112 @@
+﻿@{
+    ViewData["Title"] = "Bluetooth";
+    Layout = "~/Views/Shared/_LayoutDashboard.cshtml";
+}
+<link src="~/js/jquery.min.js" rel="stylesheet" />
+<script src="~/js/jquery.min.js"></script>
+<link href="~/css/Configuracao.css" rel="stylesheet">
+
+<div class="top-bar">
+    <button class="back-button" onclick="backButtonClick()">
+        <img src="~/img/lynxsgoo/back_icon.svg" alt="Ícone" class="botao-imagem">
+            Voltar
+    </button>
+</div>
+
+<!-- Estrutura da página -->
+<div>
+    <div class="title-container">
+        <span class="config-span">AJUSTES E CONFIGURAÇÕES</span>
+        <!-- Imagem na direita -->
+        <div class="image-container">
+            <!-- Substitua o caminho da imagem pelo caminho real -->
+            <img src="~/img/lynxsgoo/config.svg" alt="Ícone" class="botao-imagem-config">
+        </div>
+    </div>
+
+
+    <ul class="list-config">
+        <li>
+            <input type="checkbox" id="leituraAutomatica" name="leituraAutomatica" @(ViewData["Audio"] != null && (bool)ViewData["Audio"] ? "checked" : "")>
+            <label for="leituraAutomatica">Leitura automática</label>
+        </li>
+        <li>
+            <input type="checkbox" id="led" name="led" @(ViewData["Led"] != null && (bool)ViewData["Led"] ? "checked" : "")>
+            <label for="led">Luzes</label>
+        </li>
+        <!-- Adicione mais checkboxes conforme necessário -->
+    </ul>
+
+</div>
+
+<!-- Script para voltar à página anterior -->
+<script>
+    $(document).ready(async function () {
+
+        // Fetch current configuration and set checkbox states
+        var result = await getCurrentConfiguration();
+        setCheckboxState(result);
+
+        // Attach change event handler after setting initial states
+        $("input[type='checkbox']").change(function () {
+            var checkboxId = $(this).attr("id");
+            var isChecked = $(this).prop("checked");
+
+            // Make AJAX call to update the database
+            $.ajax({
+                url: '@Url.Action("UpdateCheckboxStatus", "ArmazenamentoInteligente")',
+                type: 'POST',
+                data: { checkboxId: checkboxId, isChecked: isChecked },
+                success: function (result) {
+                    // Handle success, if needed
+                    console.log(result);
+                },
+                error: function (error) {
+                    // Handle error, if needed
+                    console.error(error);
+                }
+            });
+        });
+    });
+
+    async function getCurrentConfiguration() {
+        return new Promise(function (resolve, reject) {
+            $.ajax({
+                url: '@Url.Action("GetCurrentConfiguration", "ArmazenamentoInteligente")',
+                type: 'GET',
+                success: function (result) {
+                    resolve(result);
+                },
+                error: function (error) {
+                    reject(error);
+                }
+            });
+        });
+    }
+
+    function setCheckboxState(configuration) {
+        $("#leituraAutomatica").prop("checked", configuration.leituraAutomatica);
+        $("#led").prop("checked", configuration.led);
+        // Add more lines for additional checkboxes if needed
+    }
+
+    function backButtonClick() {
+        var origin = getParameterByName('origin');
+        if (origin === 'home') {
+            window.location.href = '/ArmazenamentoInteligente/Home';
+        } else if (origin === 'homeDisconnected') {
+            window.location.href = '/ArmazenamentoInteligente/HomeDisconnected';
+        } else {
+            // Se o parâmetro 'origin' não estiver definido, voltar uma página no histórico
+            window.history.back();
+        }
+    }
+    function getParameterByName(name) {
+        name = name.replace(/[\[\]]/g, "\\$&");
+        var regex = new RegExp("[?&]" + name + "=([^&#]*)");
+        var results = regex.exec(window.location.search);
+        if (!results) return null;
+        return decodeURIComponent(results[1].replace(/\+/g, " "));
+    }
+</script>
+

@@ -1,0 +1,105 @@
+﻿<!DOCTYPE html>
+<html lang="en" style="height: 100%;">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>@ViewData["Title"]</title>
+
+    <!-- CSS Libraries -->
+    <link href="~/Dashboard/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link href="~/Dashboard/css/sb-admin-2.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link href="~/lib/datatables/css/jquery.dataTables.css" rel="stylesheet" />
+    <link href="~/css/Order.css" rel="stylesheet">
+    <link href="~/css/ArmazenamentoInteligente.css" rel="stylesheet">
+
+    <style>
+        /* New layout styles */
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            font-family: Arial, sans-serif;
+        }
+
+        .main-container {
+            height: 100%;
+            background-color: #E8E8E8;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+        }
+
+    </style>
+</head>
+
+<body id="page-top">
+    <div class="main-container">
+        @RenderBody()
+    </div>
+
+
+    <!--Modal Sucesso-->
+    <div class="modal" tabindex="-1" role="dialog" id="modalSuccessLayout">
+        <div class="modalTop-sgoo" id="modalSuccess-body" style="background-color: #E9FFEF; border-color: #00952A;">
+            <img class="modalTop-icon" src="~/img/qps/ok.png" /><label id="lblModalSuccess"></label>
+            <button id="closeModalTop" type="button" class="btn btn-default-sgoo" data-dismiss="modal">X</button>
+        </div>
+    </div>
+
+    <!--Modal Erro Topo-->
+    <div class="modal" tabindex="-1" role="dialog" id="modalErrorLayout">
+        <div class="modalTop-sgoo" id="modalErrorTop-body" style="background-color: #FFEDED; border-color: #F0003A;">
+            <img class="modalTop-icon" src="~/img/qps/cancel.png" /><label id="lblModalError"></label>
+            <button id="closeModalTop" type="button" class="btn btn-default-sgoo" data-dismiss="modal">X</button>
+        </div>
+    </div>
+
+    <script src="~/Dashboard/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="~/Dashboard/vendor/jquery-easing/jquery.easing.min.js"></script>
+    <script src="~/Dashboard/js/sb-admin-2.min.js"></script>
+
+    <!-- SignalR -->
+    <script src="~/lib/microsoft/signalr/dist/browser/signalr.js"></script>
+
+    <!-- Datatable -->
+    <script src="~/lib/datatables/jquery.dataTables.js"></script>
+    <script src="~/lib/datatables/js/dataTables.fixedColumns.js"></script>
+    <script type="text/javascript">
+        function NewOrderNotification() {
+            var message = "criou uma nova ordem.";
+            if (user == '') {
+                user = "[Anônimo]";
+            }
+            connection.invoke("SendMessageToAll", user, message).catch(function (err) {
+                return console.error(err.toString());
+            });
+        }
+
+        function NewStepNotification() {
+            var message = "criou um novo step.";
+            if (user == '') {
+                user = "[Anônimo]";
+            }
+            connection.invoke("SendMessageToAll", user, message).catch(function (err) {
+                return console.error(err.toString());
+            });
+        }
+
+        function openModalErro(msg) {
+            $("#lblModalError").html(msg);
+            $('#modalErrorLayout').modal('show');
+        }
+
+        function openModalSucesso(msg) {
+            $("#lblModalSuccess").html(msg);
+            $('#modalSuccessLayout').modal('show');
+        }
+    </script>
+</body>
+
+</html>
